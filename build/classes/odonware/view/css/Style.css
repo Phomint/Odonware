@@ -1,0 +1,171 @@
+/* 
+    Created on : 02/06/2017, 15:13:30
+    Author     : Patrick Amaral
+*/
+@font-face{
+    font-family: Roboto;
+    src: url('../font/RobotoRegular.ttf'); 
+}
+@font-face{
+    font-family: Roboto medium;
+    src: url('../font/RobotoMedium.ttf'); 
+}
+@font-face{
+    font-family: Roboto black;
+    src: url('../font/RobotoBlack.ttf'); 
+}
+.font{
+    -fx-font-family:'Roboto medium';    
+    -fx-text-fill: #545454;
+}
+.radiobuttom{
+    -fx-font-family: 'Roboto';
+    -jfx-selected-color: #4285f4;
+}
+.toolbarTitulo{
+    -fx-pref-height:70px;
+    -fx-background-color: #f5f5f5;
+   }
+.toolbarTituloPrincipal{
+    -fx-pref-height:70px;
+    -fx-background-color: #4285f4;
+   }
+.labelTitulo{
+    -fx-text-fill: #545454;
+    -fx-font-family:'Roboto';
+    -fx-font-size: 20px;
+}
+.labelTituloPrincipal{
+    -fx-text-fill: white;
+    -fx-font-family: 'Roboto medium';
+    -fx-font-size: 28px;
+}
+.labelTituloPrincipalColored{
+    -fx-text-fill: #4285f4;
+    -fx-font-family: 'Roboto medium';
+    -fx-font-size: 28px;
+}
+.labelUser{
+    -fx-font-family:'Roboto medium';
+    -fx-font-size: 14px;
+    -fx-text-fill: #FFFFFF;
+}
+.textAreaComum{
+    -fx-font-family:'Roboto';
+    -fx-font-size: 14px;
+    -jfx-focus-color: #4285f4;
+    -jfx-unfocus-color: #dadada;
+}
+.labelComum{
+    -fx-font-family:'Roboto';
+    -fx-font-size: 14px;
+    -fx-text-fill: #000000;
+}
+.buttonMedio{
+    -fx-font-family:'Roboto medium';
+    -fx-font-size: 14px;
+    -fx-text-fill: #4285f4;
+    -fx-pref-height: 34px;
+    -fx-pref-width: 95px;
+}
+.buttonGrande{
+    -fx-font-family:'Roboto medium';
+    -fx-font-size: 14px;
+    -fx-text-fill: #4285f4;
+    -fx-pref-height: 34px;
+    -fx-pref-width: 120px;
+}
+.buttonGrandeColored{
+    -fx-font-family: 'Roboto black';
+    -fx-font-size: 14px;
+    -fx-background-color: #4285f4;
+    -fx-text-fill: #FFFFFF;
+    -fx-pref-height: 34px;
+    -fx-pref-width: 120px;
+}
+.fab{
+    -fx-text-fill: #FFFFFF;
+    -fx-pref-height:50px;   
+    -fx-pref-width:50px;
+    -fx-background-color: #ff0000;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-alignment: CENTER;
+    -fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.30), 14.0, 0.3, 0,4);
+}
+.fab:hover{
+    -fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.35), 18.0, 0.4, 0,8);
+}
+.listView{
+    -fx-background-insets: 0;
+}
+.buttonMenu{
+    -fx-font-family:'Roboto medium';
+    -fx-font-size: 14px;
+    -fx-text-fill: #7c7c7c;
+    -fx-pref-height: 34px;
+    -fx-pref-width: 95px;
+}
+.buttonMenu:hover{
+    -fx-background-color: #f5f5f5;
+}
+.buttonMenu:focused{
+    -fx-background-color: #f5f5f5;
+}
+/*******************************************************************************
+ *                                                                             *
+ * Tables								                       				   *
+ *                                                                             *
+ ******************************************************************************/
+.table-view{
+        -fx-table-header-border-color: transparent;
+        -fx-border-color: transparent; 
+        -fx-background-color: transparent;
+        -fx-font-family:'Roboto';
+        -fx-font-size: 14px;
+       
+
+}
+.table-view:focused .table-row-cell:selected {
+    -fx-background-color:rgba(66, 133, 244, 1);
+    -fx-table-cell-border-color:  rgba(66, 133, 244, 0.9);
+}
+ .table-row-cell:hover{
+    -fx-background-color: #f5f5f5;
+}
+
+.table-view .filler, .tree-table-view .filler, .table-view .column-header,
+	.tree-table-view .column-header {
+	-fx-size: 65;
+	-fx-border-width: 0 0 2 0;
+	-fx-background-color: transparent;
+       
+}
+
+
+.table-view .column-header .label, .table-view .filler .label,
+	.table-view .column-drag-header .label, .tree-table-view .column-header .label,
+	.tree-table-view .filler .label, .tree-table-view .column-drag-header .label
+	{
+	-fx-alignment: CENTER_LEFT;
+        -fx-text-fill: #4285f4;
+        -fx-font-family: 'Roboto medium';
+        -fx-background-color: transparent;
+}
+
+.table-view .column-header-background, .tree-table-view .column-header-background
+	{
+	-fx-background-color: transparent;
+        -fx-font-family:'Roboto';
+        -fx-font-size: 14px;
+        
+}
+
+.table-row-cell, .tree-table-row-cell {
+	-fx-cell-size: 40px;
+        -fx-background-color: white;
+}
+
+.table-cell {
+	-fx-border-color: transparent; /*Linhas Verticais*/
+}

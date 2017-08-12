@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<JFXDialogLayout fx:id="conteudo" prefHeight="307.0" prefWidth="616.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="odonware.view.FXMLAgendarController">
+   <children>
+      <StackPane fx:id="stackPane">
+         <children>
+            <AnchorPane id="AnchorPane" fx:id="anchorPrincipal" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <VBox layoutY="70.0" prefHeight="462.0" prefWidth="639.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="70.0">
+                     <children>
+                        <JFXComboBox fx:id="cbPaciente" editable="true" focusColor="#4285f4" prefHeight="25.0" prefWidth="647.0" promptText="Paciente" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="BLACK">
+                           <VBox.margin>
+                              <Insets bottom="8.0" top="16.0" />
+                           </VBox.margin>
+                        </JFXComboBox>
+                        <HBox prefHeight="17.0" prefWidth="711.0">
+                           <children>
+                              <JFXTimePicker fx:id="tpHora" defaultColor="#4285f4" prefHeight="30.0" prefWidth="378.0" styleClass="textAreaComum" stylesheets="@../css/Style.css">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </JFXTimePicker>
+                              <JFXDatePicker fx:id="dpData" defaultColor="#4285f4" prefHeight="30.0" prefWidth="344.0" styleClass="textAreaComum" stylesheets="@../css/Style.css">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </JFXDatePicker>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <VBox.margin>
+                              <Insets bottom="8.0" top="8.0" />
+                           </VBox.margin>
+                           <children>
+                              <JFXComboBox fx:id="cbDentista" editable="true" focusColor="#4285f4" prefHeight="26.0" prefWidth="502.0" promptText="Dentista" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="BLACK" visibleRowCount="5">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </JFXComboBox>
+                              <HBox>
+                                 <children>
+                                    <JFXComboBox fx:id="cbAtendimento" editable="true" focusColor="#4285f4" prefHeight="26.0" prefWidth="502.0" promptText="Atendimento" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="BLACK" visibleRowCount="5">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </JFXComboBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <ToolBar layoutX="-10.0" prefHeight="40.0" prefWidth="759.0" styleClass="toolbarTitulo" stylesheets="@../css/Style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <Label styleClass="labelTitulo" stylesheets="@../css/Style.css" text="       Novo Agendamento" />
+                     </items>
+                  </ToolBar>
+                  <JFXButton fx:id="btnSalvar" onAction="#salvarView" prefHeight="36.0" prefWidth="90.0" ripplerFill="#4285f4" styleClass="buttonMedio" stylesheets="@../css/Style.css" text="SALVAR" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                  <JFXButton fx:id="btnCancelar" onAction="#cancelarCadastro" prefWidth="117.0" ripplerFill="#4285f4" styleClass="buttonMedio" stylesheets="@../css/Style.css" text="CANCELAR" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="110.0" />
+                  <JFXDialog />
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+   <padding>
+      <Insets bottom="1.0" />
+   </padding>
+</JFXDialogLayout>

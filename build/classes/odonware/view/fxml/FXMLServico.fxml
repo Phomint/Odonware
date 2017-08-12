@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<JFXDialogLayout fx:id="conteudo" prefHeight="418.0" prefWidth="759.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="odonware.view.FXMLServicoController">
+   <children>
+      <StackPane fx:id="stackPane">
+         <children>
+            <AnchorPane id="AnchorPane" fx:id="anchorPrincipal" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <ScrollPane layoutX="60.0" layoutY="70.0" prefHeight="348.0" prefWidth="639.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="70.0">
+                     <content>
+                        <VBox prefHeight="346.0" prefWidth="637.0" style="-fx-background-color: white;">
+                           <children>
+                              <JFXTextField fx:id="txtNomeServico" focusColor="#4285f4" promptText="Nome Serviço" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">
+                                 <VBox.margin>
+                                    <Insets bottom="8.0" top="16.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <HBox />
+                              <JFXListView fx:id="listView" focusTraversable="false" prefHeight="244.0" prefWidth="637.0" styleClass="listView" stylesheets="@../css/Style.css" />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+                  <ToolBar layoutX="-10.0" prefHeight="40.0" prefWidth="759.0" styleClass="toolbarTitulo" stylesheets="@../css/Style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <Label styleClass="labelTitulo" stylesheets="@../css/Style.css" text="       Meu Serviços" />
+                     </items>
+                  </ToolBar>
+                  <JFXButton fx:id="btnSalvar" onAction="#salvarView" prefHeight="36.0" prefWidth="90.0" ripplerFill="#4285f4" styleClass="buttonMedio" stylesheets="@../css/Style.css" text="SALVAR" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                  <JFXButton fx:id="btnCancelar" onAction="#cancelarCadastro" prefWidth="117.0" ripplerFill="#4285f4" styleClass="buttonMedio" stylesheets="@../css/Style.css" text="CANCELAR" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="110.0" />
+                  <JFXDialog />
+                  <JFXButton fx:id="btnadicionar" layoutX="10.0" layoutY="10.0" onAction="#adicionarDentista" prefWidth="117.0" ripplerFill="#4285f4" styleClass="buttonMedio" stylesheets="@../css/Style.css" text="ADICIONAR" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+   <padding>
+      <Insets bottom="1.0" />
+   </padding>
+</JFXDialogLayout>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPrincipal" prefHeight="644.0" prefWidth="938.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="odonware.view.FXMLPrincipalController">
+   <children>
+      <BorderPane fx:id="rootLayout" prefHeight="644.0" prefWidth="967.0">
+         <center>
+            <AnchorPane id="AnchorPane" fx:id="anchorPane" style="-fx-background-color: white;" />
+         </center>
+         <left>
+            <VBox prefHeight="574.0" prefWidth="250.0" style="-fx-background-color: white; -fx-border-insets: 0,0,0,2; -fx-border-color: #dadada;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="btnAgendamentos" alignment="TOP_LEFT" graphicTextGap="20.0" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" onAction="#agendamentos" prefHeight="46.0" prefWidth="199.0" ripplerFill="#dadada" styleClass="buttonMenu" stylesheets="@../css/Style.css" text="Meus Agendamentos">
+                     <padding>
+                        <Insets bottom="15.0" left="20.0" top="15.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="32.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/calendar-multiple.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets right="1.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnOrcamento" alignment="TOP_LEFT" graphicTextGap="20.0" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="46.0" prefWidth="199.0" ripplerFill="#dadada" styleClass="buttonMenu" stylesheets="@../css/Style.css" text="Criar Orçamento">
+                     <padding>
+                        <Insets bottom="15.0" left="20.0" top="15.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="32.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/shape-circle-plus.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets right="1.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnPacientes" alignment="TOP_LEFT" graphicTextGap="20.0" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" onAction="#meusPacientes" prefHeight="46.0" prefWidth="199.0" ripplerFill="#dadada" styleClass="buttonMenu" stylesheets="@../css/Style.css" text="Meus Pacientes">
+                     <padding>
+                        <Insets bottom="15.0" left="20.0" top="15.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="32.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/account-card-details.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets right="1.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <Separator prefWidth="200.0" />
+                  <JFXButton fx:id="btnConsultorio" alignment="TOP_LEFT" graphicTextGap="20.0" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="46.0" prefWidth="199.0" ripplerFill="#dadada" styleClass="buttonMenu" stylesheets="@../css/Style.css" text="Dados Consultório">
+                     <padding>
+                        <Insets bottom="15.0" left="20.0" top="15.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="32.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/desktop-mac.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets right="1.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnUsuarios" alignment="TOP_LEFT" graphicTextGap="20.0" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" onAction="#gerenciarUsuarios" prefHeight="46.0" prefWidth="199.0" ripplerFill="#dadada" styleClass="buttonMenu" stylesheets="@../css/Style.css" text="Gerenciar Usuários">
+                     <padding>
+                        <Insets bottom="15.0" left="20.0" top="15.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="32.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/account-circle.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets right="1.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnPagamentos" alignment="TOP_LEFT" graphicTextGap="20.0" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" onAction="#pagamentos" prefHeight="46.0" prefWidth="199.0" ripplerFill="#dadada" styleClass="buttonMenu" stylesheets="@../css/Style.css" text="Pagamentos">
+                     <padding>
+                        <Insets bottom="15.0" left="20.0" top="15.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="32.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/cash-usd.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets right="1.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnServicos" alignment="TOP_LEFT" graphicTextGap="20.0" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" onAction="#servicos" prefHeight="46.0" prefWidth="199.0" ripplerFill="#dadada" styleClass="buttonMenu" stylesheets="@../css/Style.css" text="Meus Serviços">
+                     <padding>
+                        <Insets bottom="15.0" left="20.0" top="15.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="32.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/clipboard-text.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets right="1.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="btnRelatorio" alignment="TOP_LEFT" graphicTextGap="20.0" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" onAction="#relatorios" prefHeight="46.0" prefWidth="199.0" ripplerFill="#dadada" styleClass="buttonMenu" stylesheets="@../css/Style.css" text="Emitir Relatório">
+                     <padding>
+                        <Insets bottom="15.0" left="20.0" top="15.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="32.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/chart-bar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets right="1.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <Separator prefWidth="200.0" />
+                  <JFXButton fx:id="btnSobre" alignment="TOP_LEFT" graphicTextGap="20.0" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="46.0" prefWidth="199.0" ripplerFill="#dadada" styleClass="buttonMenu" stylesheets="@../css/Style.css" text="Sobre">
+                     <padding>
+                        <Insets bottom="15.0" left="20.0" top="15.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="32.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/alert-circle.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets right="1.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <JFXToolbar styleClass="toolbarTituloPrincipal" stylesheets="@../css/Style.css" BorderPane.alignment="CENTER">
+               <left>
+                  <Label fx:id="lblTitulo" stylesheets="@../css/Style.css" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <graphic>
+                        <Label fx:id="lblTitulo1" styleClass="labelTituloPrincipal" stylesheets="@../css/Style.css" text="Odonware" textFill="WHITE">
+                           <font>
+                              <Font name="Roboto" size="28.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                     </graphic>
+                  </Label>
+               </left>
+               <right>
+                  <JFXButton fx:id="btnUser" alignment="TOP_LEFT" graphicTextGap="20.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="62.0" prefWidth="161.0" ripplerFill="#112340" styleClass="labelUser" stylesheets="@../css/Style.css" text="User" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <padding>
+                        <Insets bottom="15.0" left="20.0" top="15.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/account-circle-white.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </right>
+            </JFXToolbar>
+         </top>
+      </BorderPane>
+   </children>
+</StackPane>

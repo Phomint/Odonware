@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<JFXDialogLayout fx:id="conteudo" prefHeight="534.0" prefWidth="759.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="odonware.view.FXMLCadastrarUsuarioController">
+   <children>
+      <StackPane fx:id="stackPane">
+         <children>
+            <AnchorPane id="AnchorPane" fx:id="anchorPrincipal" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <VBox layoutY="70.0" prefHeight="424.0" prefWidth="711.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="70.0">
+                     <children>
+                        <JFXTextField fx:id="txtNome" focusColor="#4285f4" promptText="Nome" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">
+                           <VBox.margin>
+                              <Insets bottom="8.0" top="16.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <HBox prefHeight="17.0" prefWidth="711.0">
+                           <children>
+                              <JFXTextField fx:id="txtRg" focusColor="#4285f4" prefHeight="26.0" prefWidth="378.0" promptText="RG (apenas números)" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">
+                                 <HBox.margin>
+                                    <Insets bottom="8.0" right="10.0" top="8.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtCpf" focusColor="#4285f4" prefHeight="26.0" prefWidth="384.0" promptText="CPF (apenas números)" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <children>
+                              <JFXTextField fx:id="txtEndereco" focusColor="#4285f4" prefHeight="26.0" prefWidth="360.0" promptText="Endereço" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">
+                                 <HBox.margin>
+                                    <Insets bottom="8.0" right="10.0" top="8.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtNumero" focusColor="#4285f4" prefHeight="26.0" prefWidth="135.0" promptText="Número" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">
+                                 <HBox.margin>
+                                    <Insets bottom="8.0" left="10.0" right="10.0" top="8.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtBairro" focusColor="#4285f4" prefHeight="26.0" prefWidth="268.0" promptText="Bairro" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">
+                                 <HBox.margin>
+                                    <Insets bottom="8.0" left="10.0" top="8.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <children>
+                              <JFXTextField fx:id="txtCidade" focusColor="#4285f4" prefHeight="26.0" prefWidth="402.0" promptText="Cidade" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">
+                                 <HBox.margin>
+                                    <Insets bottom="8.0" right="10.0" top="8.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtTelefone" focusColor="#4285f4" prefHeight="26.0" prefWidth="412.0" promptText="Telefone" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">
+                                 <HBox.margin>
+                                    <Insets bottom="8.0" left="10.0" top="8.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <JFXTextField fx:id="txtEmail" focusColor="#4285f4" prefHeight="26.0" prefWidth="401.0" promptText="Email" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">
+                           <VBox.margin>
+                              <Insets bottom="8.0" top="24.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <HBox prefHeight="17.0" prefWidth="711.0">
+                           <children>
+                              <JFXTextField fx:id="txtLogin" focusColor="#4285f4" prefHeight="26.0" prefWidth="385.0" promptText="Login" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">
+                                 <HBox.margin>
+                                    <Insets bottom="8.0" right="10.0" top="8.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                              <JFXPasswordField fx:id="txtSenha" focusColor="#4285f4" prefHeight="26.0" prefWidth="397.0" promptText="Senha" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">
+                                 <HBox.margin>
+                                    <Insets bottom="8.0" left="10.0" top="8.0" />
+                                 </HBox.margin>
+                              </JFXPasswordField>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="hboxDentista" prefHeight="17.0" prefWidth="711.0" visible="false">
+                           <children>
+                              <JFXTextField fx:id="txtCro" focusColor="#4285f4" prefHeight="26.0" prefWidth="407.0" promptText="CRO (apenas números)" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">
+                                 <HBox.margin>
+                                    <Insets bottom="8.0" right="10.0" top="8.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtEspecialidade" focusColor="#4285f4" prefHeight="26.0" prefWidth="416.0" promptText="Especialidade" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">
+                                 <HBox.margin>
+                                    <Insets bottom="8.0" left="10.0" top="8.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="24.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <ToolBar layoutX="-10.0" prefHeight="40.0" prefWidth="759.0" styleClass="toolbarTitulo" stylesheets="@../css/Style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <Label styleClass="labelTitulo" stylesheets="@../css/Style.css" text="       Criar Usuário" />
+                     </items>
+                  </ToolBar>
+                  <JFXButton fx:id="btnSalvar" onAction="#salvarView" prefHeight="36.0" prefWidth="90.0" ripplerFill="#4285f4" styleClass="buttonMedio" stylesheets="@../css/Style.css" text="SALVAR" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                  <JFXButton fx:id="btnCancelar" onAction="#cancelarCadastro" prefWidth="117.0" ripplerFill="#4285f4" styleClass="buttonMedio" stylesheets="@../css/Style.css" text="CANCELAR" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="110.0" />
+                  <JFXButton fx:id="btnDentista" layoutX="10.0" layoutY="10.0" onAction="#adicionarCamposDentista" prefWidth="120.0" ripplerFill="#4285f4" styleClass="buttonGrande" stylesheets="@../css/Style.css" text="DENTISTA" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" />
+                  <JFXDialog />
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+   <padding>
+      <Insets bottom="1.0" />
+   </padding>
+</JFXDialogLayout>

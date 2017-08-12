@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="613.0" prefWidth="792.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="odonware.view.FXMLLoginController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="706.0" prefWidth="925.0" style="-fx-background-color: white;">
+         <children>
+            <ToolBar layoutX="14.0" layoutY="-4.0" prefHeight="408.0" prefWidth="792.0" style="-fx-background-color: #4285f4;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="513.0" prefWidth="438.0" style="-fx-background-color: white;">
+         <effect>
+            <DropShadow color="#0000008a" offsetX="2.0" offsetY="2.0" />
+         </effect>
+         <StackPane.margin>
+            <Insets bottom="50.0" left="30.0" right="30.0" top="50.0" />
+         </StackPane.margin>
+         <children>
+            <VBox prefHeight="513.0" prefWidth="438.0">
+               <children>
+                  <Label prefHeight="39.0" prefWidth="160.0" styleClass="labelTituloPrincipalColored" stylesheets="@../css/Style.css" text="Odonware" textFill="#4285f4">
+                     <font>
+                        <Font name="Roboto" size="28.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label styleClass="labelTitulo" stylesheets="@../css/Style.css" text="Login">
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Entre com seu usuário">
+                     <font>
+                        <Font name="Roboto" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" top="8.0" />
+                     </VBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="txtUsuario" focusColor="#4285f4" labelFloat="true" prefHeight="26.0" prefWidth="334.0" promptText="Usuário" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">
+                     <VBox.margin>
+                        <Insets bottom="16.0" left="30.0" right="30.0" top="30.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="txtSenha" focusColor="#4285f4" labelFloat="true" promptText="Senha" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="30.0" right="30.0" top="16.0" />
+                     </VBox.margin>
+                  </JFXPasswordField>
+                  <Label fx:id="lblErro" text="Usuário ou senha inválidos*" textFill="#ff4848" visible="false">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Roboto" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="imgProgress" fitHeight="143.0" fitWidth="267.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../img/progres.gif" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="80.0" right="80.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <JFXButton fx:id="btnLogar" buttonType="RAISED" onAction="#validarLogin" prefHeight="46.0" prefWidth="130.0" ripplerFill="#112340" styleClass="buttonGrandeColored" stylesheets="@../css/Style.css" text="LOGAR">
+                     <VBox.margin>
+                        <Insets left="290.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</StackPane>

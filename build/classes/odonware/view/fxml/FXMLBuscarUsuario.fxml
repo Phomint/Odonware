@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="stackPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="odonware.view.FXMLBuscarUsuarioController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="anchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: white;">
+         <children>
+            <VBox layoutY="-1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <JFXTextField fx:id="txtBuscar" focusColor="#4285f4" labelFloat="true" prefHeight="28.0" prefWidth="618.0" promptText="Buscar" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <JFXRadioButton fx:id="rbDentista" selected="true" styleClass="radiobuttom" stylesheets="@../css/Style.css" text="Dentista">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="tipoUsuario" />
+                           </toggleGroup></JFXRadioButton>
+                        <JFXRadioButton fx:id="rbFuncionario" styleClass="radiobuttom" stylesheets="@../css/Style.css" text="Funcionário" toggleGroup="$tipoUsuario">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </JFXRadioButton>
+                        <JFXButton fx:id="btnEditar" onAction="#editar" styleClass="font" stylesheets="@../css/Style.css" text="Editar">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="29.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/border-color.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="120.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton styleClass="font" stylesheets="@../css/Style.css" text="Excluir">
+                           <graphic>
+                              <ImageView fx:id="btnExcluir" fitHeight="25.0" fitWidth="29.0" onDragDetected="#excluir" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/delete.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <TableView fx:id="tblUsuario" prefHeight="677.0" prefWidth="1120.0" stylesheets="@../css/Style.css">
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </VBox>
+            <Button fx:id="fabCadastrarUsuario" mnemonicParsing="false" onAction="#abrirCadastro" prefHeight="60.0" prefWidth="61.0" styleClass="fab" stylesheets="@../css/Style.css" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/plus-white.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+               </padding>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
