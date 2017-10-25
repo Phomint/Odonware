@@ -16,6 +16,8 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import odonware.controller.UsuarioController;
 import odonware.model.CPF;
+import odonware.model.RG;
+import odonware.model.Telefone;
 
 /**
  * FXML Controller class
@@ -78,19 +80,54 @@ public class FXMLCadastrarUsuarioController implements Initializable {
                 if(newValue){
                     txtCpf.setStyle("-fx-text-fill: #545454");
                 }else{        
-          CPF valida = new CPF(getTxtCpf());
-        if(valida.isCPF()){
-            setTxtCpf(valida.getCPF(true));
-        }else{
-            txtCpf.setStyle("-fx-text-fill: #f24343");
-        }//fim do else2
+                    CPF valida = new CPF(getTxtCpf());
+                  if(valida.isCPF()){
+                      setTxtCpf(valida.getCPF(true));
+                  }else{
+                      txtCpf.setStyle("-fx-text-fill: #f24343");
+                  }//fim do else2
                 }//fim do else1
                
             }//fim do metodo changed
             
         });//fim do ChangeListener
-    }    
+         
+         txtRg.focusedProperty().addListener(new ChangeListener<Boolean>(){
+             @Override
+              public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                  if(newValue){
+                    txtRg.setStyle("-fx-text-fill: #545454");
+                }else{        
+                      RG validaRG = new RG(getTxtRg());
+                  if(validaRG.isRG()){
+                      setTxtRg(validaRG.getRG(true));
+                  }else{
+                      txtRg.setStyle("-fx-text-fill: #f24343");
+                  }//fim do else2
+                }//fim do else 1
+              } // fim do metodo changed
+        }); // fim do ChangeListener
+         
+         txtTelefone.focusedProperty().addListener(new ChangeListener<Boolean>(){
+             @Override
+              public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                  if(newValue){
+                    txtTelefone.setStyle("-fx-text-fill: #545454");
+                }else{        
+                      Telefone validaTelefone = new Telefone(getTxtTelefone());
+                  if(validaTelefone.isTelefone()){
+                      setTxtTelefone(validaTelefone.getTelefone(true));
+                  }else{
+                      txtTelefone.setStyle("-fx-text-fill: #f24343");
+                  }//fim do else2
+                }//fim do else 1
+              } // fim do metodo changed
+        }); // fim do ChangeListener
+         
+    }  // fim do initialize  
 
+    
+    
     @FXML
     private void salvarView(ActionEvent event) {
         

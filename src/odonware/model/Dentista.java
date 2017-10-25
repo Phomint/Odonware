@@ -23,7 +23,7 @@ public class Dentista implements Serializable{
     private int codigo;
     @Column(name = "den_nome", nullable = false, length = 150 )
     private String nome;
-    @Column(name = "den_rg", nullable = false, length = 9)
+    @Column(name = "den_rg", nullable = false, length = 12)
     private String rg;
     @Column(name = "den_cpf", nullable = false, length = 14)
     private String cpf;
@@ -35,7 +35,7 @@ public class Dentista implements Serializable{
     private String bairroEndereco;
     @Column(name = "den_cidade", nullable = false, length = 100)
     private String cidade;
-    @Column(name = "den_telefone", nullable = false, length = 11)
+    @Column(name = "den_telefone", nullable = false, length = 15)
     private String telefone;
     @Column(name = "den_email", nullable = false, length = 100)
     private String email;

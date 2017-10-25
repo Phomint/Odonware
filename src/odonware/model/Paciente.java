@@ -21,13 +21,13 @@ public class Paciente implements Serializable {
      private int codigo;
      @Column(name = "pac_nome", length = 150, nullable = false)
      private String nome;
-     @Column(name = "pac_nascimento", nullable = false, length = 12)
+     @Column(name = "pac_nascimento", nullable = false, length = 10)
      private String nascimento;
      @Column(name = "pac_cpf", nullable = false, length = 14)
      private String cpf;
-     @Column(name = "pac_rg", nullable = false, length = 9)
+     @Column(name = "pac_rg", nullable = false, length = 12)
      private String rg;
-     @Column(name = "pac_telefone", nullable = false, length = 11)
+     @Column(name = "pac_telefone", nullable = false, length = 15)
      private String telefone;
      @Column(name = "pac_endereco", nullable = false, length = 150)
      private String endereco;

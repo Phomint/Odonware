@@ -19,6 +19,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import odonware.controller.PacienteController;
 import odonware.model.CPF;
+import odonware.model.Data;
+import odonware.model.RG;
+import odonware.model.Telefone;
 
 /**
  * FXMLCadastrarPacienteController
@@ -92,6 +95,53 @@ public class FXMLCadastrarPacienteController implements Initializable {
             }//fim do metodo changed
             
         });//fim do ChangeListener
+        txtRg.focusedProperty().addListener(new ChangeListener<Boolean>(){
+             @Override
+              public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                  if(newValue){
+                    txtRg.setStyle("-fx-text-fill: #545454");
+                }else{        
+                      RG validaRG = new RG(getTxtRg());
+                  if(validaRG.isRG()){
+                      setTxtRg(validaRG.getRG(true));
+                  }else{
+                      txtRg.setStyle("-fx-text-fill: #f24343");
+                  }//fim do else2
+                }//fim do else 1
+              }// fim do changed
+        });// fim do ChangeListener
+        
+        txtTelefone.focusedProperty().addListener(new ChangeListener<Boolean>(){
+             @Override
+              public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                  if(newValue){
+                    txtTelefone.setStyle("-fx-text-fill: #545454");
+                }else{        
+                      Telefone validaTelefone = new Telefone(getTxtTelefone());
+                  if(validaTelefone.isTelefone()){
+                      setTxtTelefone(validaTelefone.getTelefone(true));
+                  }else{
+                      txtTelefone.setStyle("-fx-text-fill: #f24343");
+                  }//fim do else2
+                }//fim do else 1
+              } // fim do metodo changed
+        }); // fim do ChangeListener
+        
+         txtNascimento.focusedProperty().addListener(new ChangeListener<Boolean>(){
+             @Override
+              public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                  if(newValue){
+                    txtNascimento.setStyle("-fx-text-fill: #545454");
+                }else{        
+                      Data validaData = new Data(getTxtNascimento());
+                  if(validaData.isData()){
+                      setTxtNascimento(validaData.getData(true));
+                  }else{
+                      txtNascimento.setStyle("-fx-text-fill: #f24343");
+                  }//fim do else2
+                }//fim do else 1
+              } // fim do metodo changed
+        }); // fim do ChangeListener
     }//fim do initialize
 
     @FXML
@@ -189,17 +239,9 @@ public class FXMLCadastrarPacienteController implements Initializable {
     public void setTxtObservacao(String txtObservacao) {
         this.txtObservacao.setText(txtObservacao);
     }
-    
+    //REVER
     public String getTxtNascimento() {
-         Date data = null; 
-         String dtTxt = null;
-         try {
-            data = new SimpleDateFormat("dd/MM/YYYY").parse(txtNascimento.getText());
-            dtTxt = new SimpleDateFormat("YYYY-MM-dd").format(data);
-        } catch (java.text.ParseException e) {
-            e.printStackTrace();
-        }
-        return dtTxt;
+        return txtNascimento.getText();
     }
 
     public void setTxtNascimento(String txtNascimento) {
