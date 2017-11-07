@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXDialog?>
 <?import com.jfoenix.controls.JFXDialogLayout?>
 <?import com.jfoenix.controls.JFXListView?>
@@ -29,7 +30,19 @@
                                     <Insets bottom="8.0" top="16.0" />
                                  </VBox.margin>
                               </JFXTextField>
-                              <HBox />
+                              <HBox>
+                                 <children>
+                                    <JFXComboBox fx:id="cbDentista" focusColor="#4285f4" prefHeight="25.0" prefWidth="426.0" promptText="Dentista" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">
+                                       <HBox.margin>
+                                          <Insets bottom="4.0" left="20.0" right="20.0" top="4.0" />
+                                       </HBox.margin>
+                                    </JFXComboBox>
+                                    <JFXTextField fx:id="txtValor" focusColor="#4285f4" promptText="Valor" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">
+                                       <HBox.margin>
+                                          <Insets bottom="4.0" left="20.0" right="20.0" top="4.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                 </children></HBox>
                               <JFXListView fx:id="listView" focusTraversable="false" prefHeight="244.0" prefWidth="637.0" styleClass="listView" stylesheets="@../css/Style.css" />
                            </children>
                         </VBox>
@@ -43,7 +56,7 @@
                   <JFXButton fx:id="btnSalvar" onAction="#salvarView" prefHeight="36.0" prefWidth="90.0" ripplerFill="#4285f4" styleClass="buttonMedio" stylesheets="@../css/Style.css" text="SALVAR" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
                   <JFXButton fx:id="btnCancelar" onAction="#cancelarCadastro" prefWidth="117.0" ripplerFill="#4285f4" styleClass="buttonMedio" stylesheets="@../css/Style.css" text="CANCELAR" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="110.0" />
                   <JFXDialog />
-                  <JFXButton fx:id="btnadicionar" layoutX="10.0" layoutY="10.0" onAction="#adicionarDentista" prefWidth="117.0" ripplerFill="#4285f4" styleClass="buttonMedio" stylesheets="@../css/Style.css" text="ADICIONAR" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0" />
+                  <JFXButton fx:id="btnadicionar" layoutX="10.0" layoutY="10.0" onAction="#adicionarDentista" prefWidth="117.0" ripplerFill="#4285f4" styleClass="buttonMedio" stylesheets="@../css/Style.css" text="ADICIONAR" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0" />
                </children>
             </AnchorPane>
          </children>

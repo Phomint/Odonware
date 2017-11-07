@@ -9,7 +9,12 @@ import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
 import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,6 +24,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import odonware.model.Dentista;
+import odonware.model.Servico;
+import odonware.model.dao.DentistaDAO;
+import odonware.model.dao.ServicoDAO;
 
 /**
  * FXMLBuscaServicosController
@@ -34,20 +43,21 @@ public class FXMLBuscaServicosController implements Initializable {
     @FXML
     private JFXTextField txtBuscar;
     @FXML
-    private TableView<?> tblServico;
-    @FXML
-    private TableColumn<?, ?> colCodigo;
-    @FXML
-    private TableColumn<?, ?> colServico;
+    private TableView<Servico> tblServico;
     @FXML
     private Button fabCadastrarServico;
-
+    
+    private final ServicoDAO sDao = new ServicoDAO();
+      
+    private final List<Servico> listServico = sDao.readServicoOrdem();
+    
+    private final ObservableList<Servico> observableServico = FXCollections.observableArrayList();
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+       insereTableDentista();
     }    
 
     @FXML
@@ -64,5 +74,23 @@ public class FXMLBuscaServicosController implements Initializable {
                   System.out.println("Erro"+e);
             }//fim do catch
     }//fim do metodo abrirCadastro
+    
+       private void insereTableDentista(){
+     
+        if (!observableServico.isEmpty()) {
+            observableServico.clear();
+        }//fim do if
+        for(Servico servico: listServico){
+            observableServico.add(servico);
+        }//fim do for
+        TableColumn<Servico, Integer>colCodigo = new TableColumn("Código");
+        colCodigo.setCellValueFactory(data -> new SimpleIntegerProperty(data.getValue().getCodigo()).asObject());
+        TableColumn<Servico, String>colServico = new TableColumn("Serviço");
+        colServico.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getNome()));
+       
+        tblServico.getColumns().addAll(colCodigo, colServico);
+        
+       tblServico.setItems(observableServico);
+    }//fim do insereDados
     
 }//fim do FXMLController

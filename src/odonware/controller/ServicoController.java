@@ -13,13 +13,14 @@ import odonware.model.dao.ServicoDentistaDAO;
  * @sinse Classe criada em 21/06/2017
  */
 public class ServicoController {
-       public static void salvarServico(String nome){
+       public static Servico salvarServico(String nome){
            Servico servico = new Servico(nome);
            ServicoDAO sDao = new ServicoDAO();
            sDao.createServico(servico);
+           return servico;
        }//fim do salvarServico
-       public static void salvarServicoDentista(float valor, float percentual, Servico servico, Dentista dentista){
-           ServicoDentista serden = new ServicoDentista(valor, percentual, servico, dentista);
+       public static void salvarServicoDentista(float valor, Servico servico, Dentista dentista){
+           ServicoDentista serden = new ServicoDentista(valor, servico, dentista);
            ServicoDentistaDAO sdDao = new ServicoDentistaDAO();
            sdDao.createServicoDentista(serden);
        }

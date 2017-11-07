@@ -13,13 +13,11 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import odonware.controller.ServicoController;
 import odonware.model.Dentista;
-import odonware.model.ServicoDentista;
 import odonware.model.dao.DentistaDAO;
 
 /**
@@ -46,32 +44,37 @@ public class FXMLServicoController implements Initializable {
     
     private List<Dentista> dentistas = dDao.readDentistaOrdem();
     
-    private ObservableList<String> observableListDentistas = FXCollections.observableArrayList();
+    private ObservableList<Dentista> observableListDentistas = FXCollections.observableArrayList();
     @FXML
     private JFXButton btnadicionar;
     @FXML
     private JFXTextField txtNomeServico;
-    
+    @FXML
+    private JFXComboBox<Dentista> cbDentista;
+    @FXML
+    private JFXTextField txtValor;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        for (int i = 0; i < 1; i++) {
+        for(Dentista dentista: dentistas){
+                     observableListDentistas.add(dentista);
+                   }//fim do for
+       cbDentista.setItems(observableListDentistas);
+        /* for (int i = 0; i < 1; i++) {
             try { 
                 listView.getItems().add(construirHbox());
             } catch (Exception e) {
                 System.out.println("Servico-> Erro"+e);
             }
-        }//fim do for
+        }//fim do for*/
     }//fim do initialize
 
     @FXML
     private void salvarView(ActionEvent event) {
-        ServicoController.salvarServico(getTxtNomeServico());
-      
- 
-        
+        ServicoController.salvarServicoDentista(getTxtValor(),ServicoController.salvarServico(getTxtNomeServico()) , cbDentista.getSelectionModel().getSelectedItem());
+            
     }//fim do salvarView
 
     @FXML
@@ -80,15 +83,17 @@ public class FXMLServicoController implements Initializable {
 
     @FXML
     private void adicionarDentista(ActionEvent event) {
-        listView.getItems().add(construirHbox());
+  //      listView.getItems().add(construirHbox());
     }
-    private HBox construirHbox(){
+    /*private HBox construirHbox(){
          
         HBox hBox = new HBox();
-        JFXTextField txt = new JFXTextField();
-                txt.setPromptText("Valor");
-                txt.getStylesheets().add("css/Style.css");
-                txt.getStyleClass().add("textAreaComum");
+        for (int i = 0; i < 10; i++) {      
+        JFXTextField[] txt = new JFXTextField[i];
+                txt[i].setPromptText("Valor");
+                txt[i].getStylesheets().add("css/Style.css");
+                txt[i].getStyleClass().add("textAreaComum");
+        
                 JFXComboBox<String> cbDentista = new JFXComboBox<>();
                
                 cbDentista.setPromptText("Dentista");
@@ -101,13 +106,13 @@ public class FXMLServicoController implements Initializable {
                    }//fim do for
             cbDentista.setItems(observableListDentistas);
             
-            hBox.getChildren().addAll(cbDentista, txt);
+            hBox.getChildren().addAll(cbDentista, txt[i]);
             cbDentista.setPrefWidth(400);
            HBox.setMargin(cbDentista,new Insets(8,10,8,0));
-           HBox.setMargin(txt,new Insets(8,0,8,10));
-           
+           HBox.setMargin(txt[i],new Insets(8,0,8,10));
+        }
            return hBox;
-    }//fim do construirHbox
+    }//fim do construirHbox*/
 
     public String getTxtNomeServico() {
         return txtNomeServico.getText();
@@ -116,7 +121,13 @@ public class FXMLServicoController implements Initializable {
     public void setTxtNomeServico(String txtNomeServico) {
         this.txtNomeServico.setText(txtNomeServico);
     }
-    
-    
+
+    public Float getTxtValor() {
+        return Float.valueOf(txtValor.getText());
+    }
+
+    public void setTxtValor(JFXTextField txtValor) {
+        this.txtValor.setText(txtValor.getText());
+    }
     
 }//fim do FXMLServicoController

@@ -23,9 +23,8 @@ public class ServicoDentista implements Serializable {
       private int codigo;
       @Column(name = "ser_den_valor", nullable = false)
       private float valor;
-      @Column(name = "ser_den_percentual", nullable = true)
-      private float percentual;
-      
+ 
+
       @ManyToOne
       @JoinColumn(name = "ser_codigo", nullable = false)
       private Servico servico;
@@ -37,9 +36,8 @@ public class ServicoDentista implements Serializable {
     public ServicoDentista() {
     }//fim do construtor
     //CONSTRUTOR
-    public ServicoDentista(float valor, float percentual, Servico servico, Dentista dentista) {
+    public ServicoDentista(float valor, Servico servico, Dentista dentista) {
         this.valor = valor;
-        this.percentual = percentual;
         this.servico = servico;
         this.dentista = dentista;
     }//fim do construtor
@@ -60,14 +58,6 @@ public class ServicoDentista implements Serializable {
 
     public void setValor(float valor) {
         this.valor = valor;
-    }
-
-    public float getPercentual() {
-        return percentual;
-    }
-
-    public void setPercentual(float percentual) {
-        this.percentual = percentual;
     }
 
     public Servico getServico() {
