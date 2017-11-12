@@ -11,7 +11,8 @@ import odonware.model.dao.UsuarioDAO;
  */
 public class Controller {
          @Ignore
-         public static void main(String []args){          
+         public static void main(String []args){   
+             System.out.println("controller >> main");
              Usuario usuario = new Usuario("admin",UsuarioController.criptografarSenha("admin123"));
              UsuarioDAO uDao = new UsuarioDAO();
              uDao.createUsuario(usuario);

@@ -1,61 +1,63 @@
 package odonware.model;
 
+import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
 /**
  * Classe para gerar objetos do tipo Orcamento
  * @author Patrick Amaral
  * @sinse Classe criada em 01/06/2017
  */
-public class Orcamento {
+@Entity
+@Table(name="tbl_orcamento" )
+public class Orcamento implements Serializable {
+    @Id
+    @GeneratedValue
+    @Column(name = "orc_codigo")
     private int codigo;
-    private String paciente;
-    private String servico;
-    private int quantidadeServico;
+    @Column(name = "orc_valorun", nullable = false)
     private float valorUnitario;
+    @Column(name = "orc_quantparc", nullable = true)
     private int quantidadeParcelas;
+    @Column(name = "orc_valorparc", nullable = false)
     private float valorParcelas;
     
+    @ManyToOne
+    @JoinColumn(name= "fk_pac_codigo",nullable = false)
+    private Paciente paciente;
+    
+    @ManyToOne
+    @JoinColumn(name= "fk_ser_codigo",nullable = false)
+    private Servico servico;
+    
+    //CONSTRUTOR DEFAULT
+    public Orcamento() {
+    }//fim do construtor
+    
     //CONSTRUTOR
-    public Orcamento(int codigo, String paciente, String servico, int quantidadeServico, float valorUnitario, int quantidadeParcelas, float valorParcelas) {
+    public Orcamento(int codigo, float valorUnitario, int quantidadeParcelas, float valorParcelas, Paciente paciente, Servico servico) {
         this.codigo = codigo;
-        this.paciente = paciente;
-        this.servico = servico;
-        this.quantidadeServico = quantidadeServico;
         this.valorUnitario = valorUnitario;
         this.quantidadeParcelas = quantidadeParcelas;
         this.valorParcelas = valorParcelas;
+        this.paciente = paciente;
+        this.servico = servico;   
     }//fim do construtor
     
     //SETTER E GETTER
+
     public int getCodigo() {
         return codigo;
     }
 
     public void setCodigo(int codigo) {
         this.codigo = codigo;
-    }
-
-    public String getPaciente() {
-        return paciente;
-    }
-
-    public void setPaciente(String paciente) {
-        this.paciente = paciente;
-    }
-
-    public String getServico() {
-        return servico;
-    }
-
-    public void setServico(String servico) {
-        this.servico = servico;
-    }
-
-    public int getQuantidadeServico() {
-        return quantidadeServico;
-    }
-
-    public void setQuantidadeServico(int quantidadeServico) {
-        this.quantidadeServico = quantidadeServico;
     }
 
     public float getValorUnitario() {
@@ -81,6 +83,21 @@ public class Orcamento {
     public void setValorParcelas(float valorParcelas) {
         this.valorParcelas = valorParcelas;
     }
-    
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
+
+    public Servico getServico() {
+        return servico;
+    }
+
+    public void setServico(Servico servico) {
+        this.servico = servico;
+    }
     
 }//fim da classe Orcamento

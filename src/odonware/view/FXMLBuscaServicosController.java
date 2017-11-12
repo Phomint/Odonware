@@ -24,9 +24,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
-import odonware.model.Dentista;
 import odonware.model.Servico;
-import odonware.model.dao.DentistaDAO;
 import odonware.model.dao.ServicoDAO;
 
 /**

@@ -75,6 +75,10 @@ public class ServicoDentista implements Serializable {
     public void setDentista(Dentista dentista) {
         this.dentista = dentista;
     }
-      
+    @Override
+    public String toString() {
+        return getServico().getNome();
+    }
+       
       
 }//fim da classe ServicoDentista

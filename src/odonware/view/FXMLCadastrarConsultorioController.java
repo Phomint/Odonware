@@ -7,6 +7,7 @@ package odonware.view;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialogLayout;
+import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,8 +15,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
-import odonware.controller.ConsultorioController;
 
 /**
  * FXML Controller class
@@ -31,13 +32,11 @@ public class FXMLCadastrarConsultorioController implements Initializable {
     @FXML
     private AnchorPane anchorPrincipal;
     @FXML
-    private JFXTextField txtNomeFantasia;
+    private JFXTextField txtNome;
     @FXML
-    private JFXTextField txtRazaoSocial;
+    private JFXTextField txtRg;
     @FXML
-    private JFXTextField txtCnpj;
-    @FXML
-    private JFXTextField txtInscricaoEstadual;
+    private JFXTextField txtCpf;
     @FXML
     private JFXTextField txtEndereco;
     @FXML
@@ -51,9 +50,21 @@ public class FXMLCadastrarConsultorioController implements Initializable {
     @FXML
     private JFXTextField txtEmail;
     @FXML
+    private JFXTextField txtLogin;
+    @FXML
+    private JFXPasswordField txtSenha;
+    @FXML
+    private HBox hboxDentista;
+    @FXML
+    private JFXTextField txtCro;
+    @FXML
+    private JFXTextField txtEspecialidade;
+    @FXML
     private JFXButton btnSalvar;
     @FXML
     private JFXButton btnCancelar;
+    @FXML
+    private JFXButton btnDentista;
 
     /**
      * Initializes the controller class.
@@ -65,96 +76,14 @@ public class FXMLCadastrarConsultorioController implements Initializable {
 
     @FXML
     private void salvarView(ActionEvent event) {
-        ConsultorioController.salvarConsultorio(getTxtNomeFantasia(),
-                getTxtRazaoSocial(), getTxtCnpj(), getTxtInscricaoEstadual(),
-                getTxtEndereco(), getTxtNumero(), getTxtBairro(), getTxtCidade(),
-                getTxtTelefone(), getTxtEmail());
-    }//fim do salvarView
+    }
 
     @FXML
     private void cancelarCadastro(ActionEvent event) {
     }
 
-    public String getTxtNomeFantasia() {
-        return txtNomeFantasia.getText();
-    }
-
-    public void setTxtNomeFantasia(String txtNomeFantasia) {
-        this.txtNomeFantasia.setText(txtNomeFantasia);
-    }
-
-    public long getTxtCnpj() {
-        return Long.parseLong(txtCnpj.getText());
-    }
-
-    public void setTxtCnpj(String txtCnpj) {
-        this.txtCnpj.setText(txtCnpj);
-    }
-
-    public int getTxtInscricaoEstadual() {
-        return Integer.parseInt(txtInscricaoEstadual.getText());
-    }
-
-    public void setTxtInscricaoEstadual(String txtInscricaoEstadual) {
-        this.txtInscricaoEstadual.setText(txtInscricaoEstadual);
-    }
-
-    public String getTxtEndereco() {
-        return txtEndereco.getText();
-    }
-
-    public void setTxtEndereco(String txtEndereco) {
-        this.txtEndereco.setText(txtEndereco);
-    }
-
-    public String getTxtBairro() {
-        return txtBairro.getText();
-    }
-
-    public void setTxtBairro(String txtBairro) {
-        this.txtBairro.setText(txtBairro);
-    }
-
-    public String getTxtCidade() {
-        return txtCidade.getText();
-    }
-
-    public void setTxtCidade(String txtCidade) {
-        this.txtCidade.setText(txtCidade);
-    }
-
-    public String getTxtTelefone() {
-        return txtTelefone.getText();
-    }
-
-    public void setTxtTelefone(String txtTelefone) {
-        this.txtTelefone.setText(txtTelefone);
-    }
-
-    public String getTxtEmail() {
-        return txtEmail.getText();
-    }
-
-    public void setTxtEmail(String txtEmail) {
-        this.txtEmail.setText(txtEmail);
-    }
-
-    public String getTxtRazaoSocial() {
-        return txtRazaoSocial.getText();
-    }
-
-    public void setTxtRazaoSocial(String txtRazaoSocial) {
-        this.txtRazaoSocial.setText(txtRazaoSocial);
-    }
-
-    public int getTxtNumero() {
-        return Integer.parseInt(txtNumero.getText());
-    }
-
-    public void setTxtNumero(String txtNumero) {
-        this.txtNumero.setText(txtNumero);
+    @FXML
+    private void adicionarCamposDentista(ActionEvent event) {
     }
     
-    
-
 }

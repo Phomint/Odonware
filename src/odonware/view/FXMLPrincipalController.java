@@ -56,7 +56,7 @@ public class FXMLPrincipalController implements Initializable {
     
     public static String user;
     
-     private StackPane usuarios, pacientes, servicos, agendamento;
+     private StackPane usuarios, pacientes, servicos, agendamento, orcamento;
     @FXML
     private Label lblTitulo1;
     
@@ -81,6 +81,7 @@ public class FXMLPrincipalController implements Initializable {
             pacientes = FXMLLoader.load(getClass().getResource("fxml/FXMLBuscarPaciente.fxml"));
             servicos = FXMLLoader.load(getClass().getResource("fxml/FXMLBuscaServicos.fxml"));
             agendamento = FXMLLoader.load(getClass().getResource("fxml/FXMLCalendario.fxml"));
+            orcamento = FXMLLoader.load(getClass().getResource("fxml/FXMLBuscarOrcamento.fxml"));
             //tela default
           //  setNode(usuarios);
         } catch (IOException ex) {
@@ -106,6 +107,18 @@ public class FXMLPrincipalController implements Initializable {
         setNode(servicos);
          lblTitulo.setText("  Serviços");
     }//fim do metodo servicos
+    
+    @FXML
+    private void agendamentos(ActionEvent event) {
+        setNode(agendamento);
+        lblTitulo.setText(" Agenda");
+    }//fim do metodo agendamentos
+    
+    @FXML
+    private void orcamentos(ActionEvent event) {
+        setNode(orcamento);
+        lblTitulo.setText(" Orçamento");
+    }
 
     @FXML
     private void pagamentos(ActionEvent event) {
@@ -116,24 +129,7 @@ public class FXMLPrincipalController implements Initializable {
     }
       
     public  void abrirCadastros(){
-            System.out.println("FAB -> paciente");
-            try {
-           JFXDialogLayout cadastro = FXMLLoader.load(getClass().getResource(FXMLBuscarPacienteController.fxmlDoida));
-           JFXDialog dialog = new JFXDialog(stackPrincipal, cadastro, JFXDialog.DialogTransition.CENTER);
-           System.out.println(""+FXMLBuscarPacienteController.fxmlDoida);
-           dialog.show();
-              
-                  
-              } catch (Exception e) {
-                  System.out.println("Erro"+e);
-    }//fim do catch
-    
-    }//fim do metodo
-
-    @FXML
-    private void agendamentos(ActionEvent event) {
-        setNode(agendamento);
-        lblTitulo.setText(" Agenda");
-    }//fim do metodo agendamentos
+        
+    }//fim do metodo   
     
 }//fim da classe FXMLPrincipalController

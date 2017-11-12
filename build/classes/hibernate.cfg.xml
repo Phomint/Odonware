@@ -56,5 +56,6 @@ Contributor(s):
     <mapping class="odonware.model.Agenda"/>
     <mapping class="odonware.model.Servico"/>
     <mapping class="odonware.model.ServicoDentista"/>
+    <mapping class="odonware.model.Orcamento"/>
   </session-factory>
 </hibernate-configuration>

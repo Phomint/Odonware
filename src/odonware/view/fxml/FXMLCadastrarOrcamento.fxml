@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<JFXDialogLayout fx:id="conteudo" prefHeight="534.0" prefWidth="759.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="odonware.view.FXMLCadastrarOrcamentoController">
+   <children>
+      <StackPane fx:id="stackPane">
+         <children>
+            <AnchorPane id="AnchorPane" fx:id="anchorPrincipal" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <VBox layoutY="70.0" prefHeight="424.0" prefWidth="711.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="70.0">
+                     <children>
+                        <HBox>
+                           <VBox.margin>
+                              <Insets bottom="8.0" top="8.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <JFXComboBox fx:id="cbPaciente" focusColor="#4285f4" prefHeight="28.0" prefWidth="655.0" promptText="Paciente" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">
+                           <VBox.margin>
+                              <Insets bottom="8.0" top="16.0" />
+                           </VBox.margin>
+                        </JFXComboBox>
+                        <JFXComboBox fx:id="cbServico" focusColor="#4285f4" prefHeight="28.0" prefWidth="652.0" promptText="Servico" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">
+                           <VBox.margin>
+                              <Insets bottom="8.0" top="16.0" />
+                           </VBox.margin>
+                        </JFXComboBox>
+                        <JFXTextField fx:id="txtValor" focusColor="#4285f4" promptText="Valor" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">
+                           <VBox.margin>
+                              <Insets right="500.0" top="16.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <HBox prefHeight="11.0" prefWidth="639.0">
+                           <VBox.margin>
+                              <Insets bottom="8.0" top="24.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <ToolBar layoutX="-10.0" prefHeight="40.0" prefWidth="759.0" styleClass="toolbarTitulo" stylesheets="@../css/Style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <Label styleClass="labelTitulo" stylesheets="@../css/Style.css" text="       Criar Orçamento" />
+                     </items>
+                  </ToolBar>
+                  <JFXButton fx:id="btnSalvar" onAction="#salvarView" prefHeight="36.0" prefWidth="90.0" ripplerFill="#4285f4" styleClass="buttonMedio" stylesheets="@../css/Style.css" text="SALVAR" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                  <JFXButton fx:id="btnCancelar" onAction="#cancelarCadastro" prefWidth="117.0" ripplerFill="#4285f4" styleClass="buttonMedio" stylesheets="@../css/Style.css" text="CANCELAR" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="110.0" />
+                  <JFXDialog />
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+   <padding>
+      <Insets bottom="1.0" />
+   </padding>
+</JFXDialogLayout>

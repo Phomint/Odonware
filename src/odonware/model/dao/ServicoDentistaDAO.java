@@ -38,7 +38,7 @@ public class ServicoDentistaDAO {
         List<ServicoDentista> servicoDentistas = new ArrayList<ServicoDentista>();
         sessao.beginTransaction();
         Criteria criterio = sessao.createCriteria(ServicoDentista.class);
-        criterio.addOrder(Order.asc("nome"));   
+        criterio.addOrder(Order.asc("servico"));   
         servicoDentistas = criterio.list();
         
         sessao.getTransaction().commit();      

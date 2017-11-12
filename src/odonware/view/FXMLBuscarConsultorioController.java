@@ -5,16 +5,48 @@
  */
 package odonware.view;
 
+import com.jfoenix.controls.JFXDialogLayout;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
 
 /**
- * FXMLBuscarConsultorioController
+ * FXML Controller class
+ *
  * @author Patrick Amaral
- * @since FXMLController criado em 10/07/2017
  */
 public class FXMLBuscarConsultorioController implements Initializable {
+
+    @FXML
+    private JFXDialogLayout conteudo;
+    @FXML
+    private StackPane stackPane;
+    @FXML
+    private AnchorPane anchorPrincipal;
+    @FXML
+    private Label lblNomeFantasia;
+    @FXML
+    private Label lblNomeFantasia1;
+    @FXML
+    private Label lblNomeFantasia11;
+    @FXML
+    private Label lblNomeFantasia111;
+    @FXML
+    private Label lblNomeFantasia112;
+    @FXML
+    private Label lblNomeFantasia1121;
+    @FXML
+    private Label lblNomeFantasia11211;
+    @FXML
+    private Label lblNomeFantasia11212;
+    @FXML
+    private Label lblNomeFantasia11213;
+    @FXML
+    private Label lblNomeFantasia11214;
 
     /**
      * Initializes the controller class.
@@ -22,8 +54,6 @@ public class FXMLBuscarConsultorioController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }//fim do initialize
-
+    }    
     
-    
-}//fim do FXMLBuscarConsultorioController
+}

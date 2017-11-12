@@ -169,9 +169,9 @@ public class Paciente implements Serializable {
         this.observacao = observacao;
     }
 
-    @Override
+       @Override
     public String toString() {
-        return "Paciente{" + "codigo=" + codigo + ", nome=" + nome + ", nascimento=" + nascimento + ", cpf=" + cpf + ", rg=" + rg + ", telefone=" + telefone + ", endereco=" + endereco + ", numero=" + numero + ", bairro=" + bairro + ", cidade=" + cidade + ", tipoSanguineo=" + tipoSanguineo + ", doen\u00e7asAlergias=" + doençasAlergias + ", observacao=" + observacao + '}';
-    }    
+        return getNome();
+    }
      
 }//fim da classe Paciente

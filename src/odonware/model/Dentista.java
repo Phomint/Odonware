@@ -45,7 +45,7 @@ public class Dentista implements Serializable{
     private String especialidade;
     
     @ManyToOne
-    @JoinColumn(name= "usr_codigo",nullable = false)
+    @JoinColumn(name= "fk_usr_codigo",nullable = false)
     private Usuario usuario;
         
     //CONSTRUTOR DEFAULT

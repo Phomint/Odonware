@@ -39,12 +39,6 @@ public class FXMLServicoController implements Initializable {
     private JFXButton btnSalvar;
     @FXML
     private JFXButton btnCancelar;
-
-    private DentistaDAO dDao = new DentistaDAO();
-    
-    private List<Dentista> dentistas = dDao.readDentistaOrdem();
-    
-    private ObservableList<Dentista> observableListDentistas = FXCollections.observableArrayList();
     @FXML
     private JFXButton btnadicionar;
     @FXML
@@ -53,6 +47,12 @@ public class FXMLServicoController implements Initializable {
     private JFXComboBox<Dentista> cbDentista;
     @FXML
     private JFXTextField txtValor;
+    
+    private DentistaDAO dDao = new DentistaDAO();
+    
+    private List<Dentista> dentistas = dDao.readDentistaOrdem();
+    
+    private ObservableList<Dentista> observableListDentistas = FXCollections.observableArrayList();
     /**
      * Initializes the controller class.
      */
