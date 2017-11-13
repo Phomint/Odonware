@@ -16,12 +16,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
-import odonware.model.CPF;
 import odonware.model.Paciente;
-import odonware.model.Servico;
 import odonware.model.ServicoDentista;
 import odonware.model.dao.PacienteDAO;
-import odonware.model.dao.ServicoDAO;
 import odonware.model.dao.ServicoDentistaDAO;
 
 /**

@@ -19,10 +19,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
-import odonware.controller.PacienteController;
 import odonware.model.Paciente;
 import odonware.model.dao.PacienteDAO;
 
@@ -108,5 +108,14 @@ public class FXMLBuscarPacienteController implements Initializable {
     @FXML
     private void excluir(MouseEvent event) {
     }
+
+    @FXML
+    private void pressed(KeyEvent event) {
+    }
+
+    @FXML
+    private void typed(KeyEvent event) {
+    }
+
     
 }//fim do FXMLController 
