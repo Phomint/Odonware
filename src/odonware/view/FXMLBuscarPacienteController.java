@@ -52,9 +52,10 @@ public class FXMLBuscarPacienteController implements Initializable {
       
     private final List<Paciente> listPaciente = pDao.readPacienteOrdem();
     
+    private List<Paciente> listNomes;
+    
     private final ObservableList<Paciente> observablePaciente = FXCollections.observableArrayList();
    
-    public static String fxmlDoida = "fxml/FXMLCadastrarPaciente";
     /**
      * Initializes the controller class.
      */
@@ -111,6 +112,7 @@ public class FXMLBuscarPacienteController implements Initializable {
 
     @FXML
     private void pressed(KeyEvent event) {
+        listNomes = pDao.buscarPorNome(txtBuscar.getText());
     }
 
     @FXML

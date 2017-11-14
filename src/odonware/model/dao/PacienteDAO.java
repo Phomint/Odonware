@@ -5,6 +5,7 @@ import java.util.List;
 import odonware.model.Paciente;
 import odonware.model.util.HibernateUtil;
 import org.hibernate.Criteria;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
@@ -72,13 +73,20 @@ public class PacienteDAO {
     }//fim do metodo deletePaciente
        
         public List<Paciente> buscarPorNome(String nome){
+            System.out.println("Linha 1");
         Session sessao = HibernateUtil.getSessionFactory().openSession(); 
-        List<Paciente> pacientes = new ArrayList<Paciente>();
+           System.out.println("Linha 2");
+         List<Paciente> pacientes = new ArrayList<Paciente>();
         Criteria criterio = sessao.createCriteria(Paciente.class);
-        criterio.add(Restrictions.eq("nome %" , nome));
-        Paciente paciente = (Paciente) criterio.uniqueResult();               
-                
+        criterio.add(Restrictions.ilike("nome","%"+nome+"%"));
+         pacientes = criterio.list(); 
+           /* Query query = sessao.createQuery("SELECT * FROM tsbl_paciente WHERE pac_nome LIKE '%:nome%';");
+            query.setParameter("nome", nome);
+            pacientes = query.list();*/
+            
+        System.out.println("Linha 3");
         sessao.close();
+        System.out.println("Linha 4");
         return pacientes;
         }//fim do metodo buscarPorNome
 
