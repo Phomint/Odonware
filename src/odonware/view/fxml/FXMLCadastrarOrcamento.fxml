@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<JFXDialogLayout fx:id="conteudo" prefHeight="534.0" prefWidth="759.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="odonware.view.FXMLCadastrarOrcamentoController">
+<JFXDialogLayout fx:id="conteudo" prefHeight="307.0" prefWidth="759.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="odonware.view.FXMLCadastrarOrcamentoController">
    <children>
       <StackPane fx:id="stackPane">
          <children>
