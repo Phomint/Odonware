@@ -16,6 +16,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import odonware.controller.OrcamentoController;
 import odonware.model.Paciente;
 import odonware.model.ServicoDentista;
 import odonware.model.dao.PacienteDAO;
@@ -85,11 +86,12 @@ public class FXMLCadastrarOrcamentoController implements Initializable {
                 }//fim do else
             }//fim do metodo change
         });//fim do ChangeListener
-    }    
+    }//fim do initialize
 
     @FXML
     private void salvarView(ActionEvent event) {
-    }
+         OrcamentoController.salvarOrcamento(getTxtValor(), getCbPaciente(), getCbServicoDentista());
+    }//fim do metodo salvarView
 
     @FXML
     private void cancelarCadastro(ActionEvent event) {
@@ -108,4 +110,4 @@ public class FXMLCadastrarOrcamentoController implements Initializable {
     }
 
   
-}
+}// fim da classe

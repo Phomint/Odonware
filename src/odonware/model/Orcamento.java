@@ -23,31 +23,24 @@ public class Orcamento implements Serializable {
     private int codigo;
     @Column(name = "orc_valorun", nullable = false)
     private float valorUnitario;
-    @Column(name = "orc_quantparc", nullable = true)
-    private int quantidadeParcelas;
-    @Column(name = "orc_valorparc", nullable = false)
-    private float valorParcelas;
     
     @ManyToOne
     @JoinColumn(name= "fk_pac_codigo",nullable = false)
     private Paciente paciente;
     
     @ManyToOne
-    @JoinColumn(name= "fk_ser_codigo",nullable = false)
-    private Servico servico;
+    @JoinColumn(name= "fk_serden_codigo",nullable = false)
+    private ServicoDentista servicoDentista;
     
     //CONSTRUTOR DEFAULT
     public Orcamento() {
     }//fim do construtor
     
     //CONSTRUTOR
-    public Orcamento(int codigo, float valorUnitario, int quantidadeParcelas, float valorParcelas, Paciente paciente, Servico servico) {
-        this.codigo = codigo;
+    public Orcamento(float valorUnitario,Paciente paciente, ServicoDentista servicoDentista) {
         this.valorUnitario = valorUnitario;
-        this.quantidadeParcelas = quantidadeParcelas;
-        this.valorParcelas = valorParcelas;
         this.paciente = paciente;
-        this.servico = servico;   
+        this.servicoDentista = servicoDentista;   
     }//fim do construtor
     
     //SETTER E GETTER
@@ -68,22 +61,6 @@ public class Orcamento implements Serializable {
         this.valorUnitario = valorUnitario;
     }
 
-    public int getQuantidadeParcelas() {
-        return quantidadeParcelas;
-    }
-
-    public void setQuantidadeParcelas(int quantidadeParcelas) {
-        this.quantidadeParcelas = quantidadeParcelas;
-    }
-
-    public float getValorParcelas() {
-        return valorParcelas;
-    }
-
-    public void setValorParcelas(float valorParcelas) {
-        this.valorParcelas = valorParcelas;
-    }
-
     public Paciente getPaciente() {
         return paciente;
     }
@@ -92,12 +69,12 @@ public class Orcamento implements Serializable {
         this.paciente = paciente;
     }
 
-    public Servico getServico() {
-        return servico;
+    public ServicoDentista getServicoDentista() {
+        return servicoDentista;
     }
 
-    public void setServico(Servico servico) {
-        this.servico = servico;
+    public void setServicoDentista(ServicoDentista servicoDentista) {
+        this.servicoDentista = servicoDentista;
     }
     
 }//fim da classe Orcamento

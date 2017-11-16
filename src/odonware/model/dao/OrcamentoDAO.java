@@ -39,7 +39,7 @@ public class OrcamentoDAO {
         List<Orcamento> orcamentos = new ArrayList<Orcamento>();
         sessao.beginTransaction();
         Criteria criterio = sessao.createCriteria(Orcamento.class);
-        criterio.addOrder(Order.asc("nome"));   
+        criterio.addOrder(Order.asc("codigo"));   
         orcamentos = criterio.list();
         
         sessao.getTransaction().commit();      

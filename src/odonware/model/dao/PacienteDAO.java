@@ -5,7 +5,6 @@ import java.util.List;
 import odonware.model.Paciente;
 import odonware.model.util.HibernateUtil;
 import org.hibernate.Criteria;
-import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
