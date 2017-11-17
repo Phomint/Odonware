@@ -17,6 +17,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import odonware.model.Orcamento;
@@ -45,6 +46,8 @@ public class FXMLBuscarOrcamentoController implements Initializable {
     private final List<Orcamento> listOrcamento = oDao.readOrcamentosOrdem();
     
     private final ObservableList<Orcamento> observableOrcamento = FXCollections.observableArrayList();
+    
+    private List<Orcamento> listNomeP;
 
     /**
      * Initializes the controller class.
@@ -89,5 +92,31 @@ public class FXMLBuscarOrcamentoController implements Initializable {
        tblOrcamento.getColumns().addAll(colCodigo, colPaciente, colServico, colDentista);
        tblOrcamento.setItems(observableOrcamento);
     }//fim do insereDados
+
+    @FXML
+    
+    private void pressed(KeyEvent event) {
+        /*listNomeP = oDao.buscarPorNome(txtBuscar.getText());
+       tblOrcamento.getColumns().clear();
+       tblOrcamento.getItems().clear();
+        if (!observableOrcamento.isEmpty()) {
+            observableOrcamento.clear();
+        }//fim do if
+        for(Orcamento orcamento: listNomeP){
+            observableOrcamento.add(orcamento);
+        }//fim do for
+        TableColumn<Orcamento, Integer>colCodigo = new TableColumn("Código");
+        colCodigo.setCellValueFactory(data -> new SimpleIntegerProperty(data.getValue().getCodigo()).asObject());
+        TableColumn<Orcamento, String>colPaciente = new TableColumn("Paciente");
+        colPaciente.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getPaciente().getNome()));
+       TableColumn<Orcamento, String>colServico = new TableColumn("Servico");
+       colServico.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getServicoDentista().getServico().getNome()));
+       TableColumn<Orcamento, String>colDentista = new TableColumn("Dentista");
+       colDentista.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getServicoDentista().getDentista().getNome()));
+      
+       tblOrcamento.getColumns().addAll(colCodigo, colPaciente, colServico, colDentista);
+       tblOrcamento.setItems(observableOrcamento);
+      */  
+    }
 
 }//fim da classe

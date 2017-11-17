@@ -55,6 +55,7 @@ public class FXMLBuscarPacienteController implements Initializable {
     private List<Paciente> listNomes;
     
     private final ObservableList<Paciente> observablePaciente = FXCollections.observableArrayList();
+    
    
     /**
      * Initializes the controller class.
@@ -112,11 +113,33 @@ public class FXMLBuscarPacienteController implements Initializable {
 
     @FXML
     private void pressed(KeyEvent event) {
-        listNomes = pDao.buscarPorNome(txtBuscar.getText());
+       listNomes = pDao.buscarPorNome(txtBuscar.getText());
+       tblPaciente.getColumns().clear();
+       tblPaciente.getItems().clear();
+        if (!observablePaciente.isEmpty()) {
+            observablePaciente.clear();
+        }//fim do if
+        for(Paciente paciente: listNomes){
+            observablePaciente.add(paciente);
+        }//fim do for
+        TableColumn<Paciente, Integer>colCodigo = new TableColumn("Código");
+        colCodigo.setCellValueFactory(data -> new SimpleIntegerProperty(data.getValue().getCodigo()).asObject());
+        TableColumn<Paciente, String>colPaciente = new TableColumn("Paciente");
+        colPaciente.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getNome()));
+       TableColumn<Paciente, String>colCPF = new TableColumn("CPF");
+       colCPF.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getCpf()));
+       TableColumn<Paciente, String>colCidade = new TableColumn("Cidade");
+       colCidade.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getCidade()));
+       TableColumn<Paciente, String>colTelefone = new TableColumn("Telefone");
+       colTelefone.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getTelefone()));
+      
+       tblPaciente.getColumns().addAll(colCodigo, colPaciente, colCPF, colCidade, colTelefone);
+       tblPaciente.setItems(observablePaciente);
     }
 
     @FXML
     private void typed(KeyEvent event) {
+    
     }
 
     

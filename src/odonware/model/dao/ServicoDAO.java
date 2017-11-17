@@ -8,6 +8,7 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Restrictions;
 
 /**
  * Classe para gerar objetos do tipo ServicoDAO
@@ -69,5 +70,19 @@ public class ServicoDAO {
         transactio.commit();
         sessao.close();
     }//fim do metodo deleteServico
+       
+       public List<Servico> buscarPorNome(String nome){
+            System.out.println("ServicoDAO >> buscarPorNome");
+        Session sessao = HibernateUtil.getSessionFactory().openSession(); 
+           
+         List<Servico> servicos = new ArrayList<Servico>();
+        Criteria criterio = sessao.createCriteria(Servico.class);
+        criterio.add(Restrictions.ilike("nome","%"+nome+"%"));
+         servicos = criterio.list(); 
+          
+        sessao.close();
+        
+        return servicos;
+        }//fim do metodo buscarPorNome
 
 }//fim da classe ServicoDAO

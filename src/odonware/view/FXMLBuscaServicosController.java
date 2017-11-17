@@ -22,6 +22,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import odonware.model.Servico;
@@ -50,6 +51,8 @@ public class FXMLBuscaServicosController implements Initializable {
     private final List<Servico> listServico = sDao.readServicoOrdem();
     
     private final ObservableList<Servico> observableServico = FXCollections.observableArrayList();
+    
+    private List<Servico> listNomes;
     /**
      * Initializes the controller class.
      */
@@ -90,5 +93,29 @@ public class FXMLBuscaServicosController implements Initializable {
         
        tblServico.setItems(observableServico);
     }//fim do insereDados
+
+    @FXML
+    
+    /*private void pressed(KeyEvent event) {
+        listNomes = sDao.buscarPorNome(txtBuscar.getText());
+       tblServico.getColumns().clear();
+       tblServico.getItems().clear();
+        if (!observableServico.isEmpty()) {
+            observableServico.clear();
+        }//fim do if
+        for(Servico servico: listNomes){
+            observableServico.add(servico);
+        }//fim do for
+        TableColumn<Servico, Integer>colCodigo = new TableColumn("Código");
+        colCodigo.setCellValueFactory(data -> new SimpleIntegerProperty(data.getValue().getCodigo()).asObject());
+        TableColumn<Servico, String>colServico = new TableColumn("Serviço");
+        colServico.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getNome()));
+       
+        tblServico.getColumns().addAll(colCodigo, colServico);
+        
+       tblServico.setItems(observableServico);
+        
+    } 
+ */
     
 }//fim do FXMLController

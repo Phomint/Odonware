@@ -8,6 +8,7 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Restrictions;
 
 /**
  * Classe para gerar objetos do tipo OrcamentoDAO
@@ -71,4 +72,17 @@ public class OrcamentoDAO {
         sessao.close();
     }//fim do metodo deleteOrcamento
 
+       public List<Orcamento> buscarPorNome(String nome){
+            System.out.println("OrcamentoDAO >> buscarPorNome");
+        Session sessao = HibernateUtil.getSessionFactory().openSession(); 
+           
+         List<Orcamento> orcamentos = new ArrayList<Orcamento>();
+        Criteria criterio = sessao.createCriteria(Orcamento.class);
+        criterio.add(Restrictions.ilike("paciente","%"+nome+"%"));
+         orcamentos = criterio.list(); 
+          
+        sessao.close();
+        
+        return orcamentos;
+        }//fim do metodo buscarPorNome
 }
