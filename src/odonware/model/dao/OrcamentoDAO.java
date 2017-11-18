@@ -72,13 +72,13 @@ public class OrcamentoDAO {
         sessao.close();
     }//fim do metodo deleteOrcamento
 
-       public List<Orcamento> buscarPorNome(String nome){
+       public List<Orcamento> buscarPorNome(int codigo){
             System.out.println("OrcamentoDAO >> buscarPorNome");
         Session sessao = HibernateUtil.getSessionFactory().openSession(); 
            
          List<Orcamento> orcamentos = new ArrayList<Orcamento>();
         Criteria criterio = sessao.createCriteria(Orcamento.class);
-        criterio.add(Restrictions.ilike("paciente","%"+nome+"%"));
+        criterio.add(Restrictions.ilike("codigo","%"+codigo+"%"));
          orcamentos = criterio.list(); 
           
         sessao.close();

@@ -96,7 +96,7 @@ public class FXMLBuscarOrcamentoController implements Initializable {
     @FXML
     
     private void pressed(KeyEvent event) {
-        /*listNomeP = oDao.buscarPorNome(txtBuscar.getText());
+        listNomeP = oDao.buscarPorNome(Integer.parseInt(txtBuscar.getText()));
        tblOrcamento.getColumns().clear();
        tblOrcamento.getItems().clear();
         if (!observableOrcamento.isEmpty()) {
@@ -116,7 +116,7 @@ public class FXMLBuscarOrcamentoController implements Initializable {
       
        tblOrcamento.getColumns().addAll(colCodigo, colPaciente, colServico, colDentista);
        tblOrcamento.setItems(observableOrcamento);
-      */  
+        
     }
 
 }//fim da classe

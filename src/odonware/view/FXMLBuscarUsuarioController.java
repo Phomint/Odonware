@@ -21,6 +21,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
@@ -58,6 +59,8 @@ public class FXMLBuscarUsuarioController implements Initializable {
     private final DentistaDAO dDao = new DentistaDAO();
       
     private final List<Dentista> listDentista = dDao.readDentistaOrdem();
+    
+    private List<Dentista> listNomes;
     
     private final ObservableList<Dentista> observableDentista = FXCollections.observableArrayList();
   
@@ -115,5 +118,27 @@ public class FXMLBuscarUsuarioController implements Initializable {
 
     @FXML
     private void excluir(MouseEvent event) {
+    }
+
+    @FXML
+    private void pressed(KeyEvent event) {
+        listNomes = dDao.buscarPorNome(txtBuscar.getText());
+       tblUsuario.getColumns().clear();
+       tblUsuario.getItems().clear();
+        if (!observableDentista.isEmpty()) {
+            observableDentista.clear();
+        }//fim do if
+        for(Dentista dentistas: listNomes){
+            observableDentista.add(dentistas);
+        }//fim do for
+        TableColumn<Dentista, Integer>colCodigo = new TableColumn("Código");
+        colCodigo.setCellValueFactory(data -> new SimpleIntegerProperty(data.getValue().getCodigo()).asObject());
+        TableColumn<Dentista, String>colDentista = new TableColumn("Dentista");
+        colDentista.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getNome()));
+        TableColumn<Dentista, String>colUsuario = new TableColumn("Usuário");
+        colUsuario.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getUsuario().getUsuario()));
+        
+        tblUsuario.getColumns().addAll(colCodigo, colDentista, colUsuario);
+       tblUsuario.setItems(observableDentista);
     }
 }//fim do FXMLBuscarUsuarioController

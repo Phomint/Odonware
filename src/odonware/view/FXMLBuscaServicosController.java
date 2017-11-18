@@ -96,7 +96,7 @@ public class FXMLBuscaServicosController implements Initializable {
 
     @FXML
     
-    /*private void pressed(KeyEvent event) {
+      private void pressed(KeyEvent event) {
         listNomes = sDao.buscarPorNome(txtBuscar.getText());
        tblServico.getColumns().clear();
        tblServico.getItems().clear();
@@ -116,6 +116,6 @@ public class FXMLBuscaServicosController implements Initializable {
        tblServico.setItems(observableServico);
         
     } 
- */
+ 
     
 }//fim do FXMLController

@@ -8,6 +8,7 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Restrictions;
 
 /**
  * Classe para gerar objetos do tipo DentistaDAO
@@ -71,4 +72,18 @@ public class DentistaDAO {
         sessao.close();
     }//fim do metodo deleteDentista
 
+       
+       public List<Dentista> buscarPorNome(String nome){
+            System.out.println("DentistaDAO >> buscarPorNome");
+        Session sessao = HibernateUtil.getSessionFactory().openSession(); 
+           
+         List<Dentista> dentistas = new ArrayList<Dentista>();
+        Criteria criterio = sessao.createCriteria(Dentista.class);
+        criterio.add(Restrictions.ilike("nome","%"+nome+"%"));
+         dentistas = criterio.list(); 
+          
+        sessao.close();
+        
+        return dentistas;
+        }//fim do metodo buscarPorNome
 }//fim da classe DentistaDAO

@@ -88,5 +88,7 @@ public class UsuarioDAO {
         sessao.close();
         return usuario;
     }//fim do metodo validarLogin
+        
+        
 
 }//fim da classe UsuarioDAO
