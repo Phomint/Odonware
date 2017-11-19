@@ -15,7 +15,7 @@
 
 <JFXDialogLayout fx:id="conteudo" prefHeight="534.0" prefWidth="759.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="odonware.view.FXMLCadastrarUsuarioController">
    <children>
-      <StackPane fx:id="stackPane">
+      <StackPane fx:id="stackPane" stylesheets="@../css/Style.css">
          <children>
             <AnchorPane id="AnchorPane" fx:id="anchorPrincipal" style="-fx-background-color: #FFFFFF;">
                <children>

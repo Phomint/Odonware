@@ -2,8 +2,11 @@ package odonware.view;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
+import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
+import com.jfoenix.controls.JFXSnackbar;
 import com.jfoenix.controls.JFXTextField;
+import java.awt.Color;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.beans.value.ChangeListener;
@@ -11,10 +14,14 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Background;
 import javafx.scene.layout.StackPane;
+import javafx.scene.text.Text;
 import odonware.controller.PacienteController;
 import odonware.model.CPF;
 import odonware.model.Data;
@@ -140,14 +147,27 @@ public class FXMLCadastrarPacienteController implements Initializable {
                 }//fim do else 1
               } // fim do metodo changed
         }); // fim do ChangeListener
+         
     }//fim do initialize
 
     @FXML
     private void salvarView(ActionEvent event) {
-        PacienteController.salvarPaciente(getTxtNome(), getTxtNascimento(),
+        JFXSnackbar snack = new JFXSnackbar(stackPane);
+        
+        
+      try {
+     //Salvar no banco
+     PacienteController.salvarPaciente(getTxtNome(), getTxtNascimento(),
                 getTxtCpf(), getTxtRg(), getTxtTelefone(), getTxtEndereco(), 
                 getTxtNumero(), getTxtBairro(), getTxtCidade(), getCbSanguineo(),
                 getTxtDoenca(), getTxtObservacao());
+       snack.show("                Salvo com Sucesso                ", 5000);
+      
+ 
+        }catch (Exception e) {
+       snack.show("                Preencha os campos                ", 7000);
+        }
+  
     }//fim do salvarView
 
     @FXML

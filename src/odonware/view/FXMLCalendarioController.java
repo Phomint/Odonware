@@ -38,7 +38,7 @@ public class FXMLCalendarioController implements Initializable {
     private void abrirAgendamento(ActionEvent event) {
             System.out.println("FAB -> agendamento");
             try {
-           JFXDialogLayout cadastro = FXMLLoader.load(getClass().getResource("fxml/FXMLCalendario.fxml"));
+           JFXDialogLayout cadastro = FXMLLoader.load(getClass().getResource("fxml/FXMLAgendar.fxml"));
            JFXDialog dialog = new JFXDialog(stackPane, cadastro, JFXDialog.DialogTransition.CENTER);
          
            dialog.show();

@@ -46,14 +46,14 @@
                               <Insets bottom="8.0" top="8.0" />
                            </VBox.margin>
                            <children>
-                              <JFXComboBox fx:id="cbDentista" editable="true" focusColor="#4285f4" prefHeight="26.0" prefWidth="502.0" promptText="Dentista" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="BLACK" visibleRowCount="5">
+                              <JFXComboBox fx:id="cbDentista" focusColor="#4285f4" prefHeight="26.0" prefWidth="502.0" promptText="Dentista" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="BLACK" visibleRowCount="5">
                                  <HBox.margin>
                                     <Insets right="10.0" />
                                  </HBox.margin>
                               </JFXComboBox>
                               <HBox>
                                  <children>
-                                    <JFXComboBox fx:id="cbAtendimento" editable="true" focusColor="#4285f4" prefHeight="26.0" prefWidth="502.0" promptText="Atendimento" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="BLACK" visibleRowCount="5">
+                                    <JFXComboBox fx:id="cbAtendimento" focusColor="#4285f4" prefHeight="26.0" prefWidth="502.0" promptText="Atendimento" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="BLACK" visibleRowCount="5">
                                        <HBox.margin>
                                           <Insets left="10.0" />
                                        </HBox.margin>

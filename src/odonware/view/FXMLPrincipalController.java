@@ -1,8 +1,8 @@
 package odonware.view;
 
 import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXDialog;
-import com.jfoenix.controls.JFXDialogLayout;
+import com.jfoenix.controls.JFXPopup;
+import com.jfoenix.controls.JFXRippler;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -12,11 +12,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import odonware.Odonware;
 
 /**
@@ -53,18 +56,22 @@ public class FXMLPrincipalController implements Initializable {
     private JFXButton btnUser;
     @FXML
     private Label lblTitulo;
-    
+        
     public static String user;
     
-     private StackPane usuarios, pacientes, servicos, agendamento, orcamento;
+     private StackPane usuarios, pacientes, servicos, agendamento, orcamento, consultorio;
     @FXML
+    
     private Label lblTitulo1;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         btnUser.setText(user);
-        carregarTelas();
-         
+         carregarTelas();
+        setNode(agendamento);
+        lblTitulo.setText(" Agenda");
+        
+        contruirPopUp();
     }//fim do initialize    
 
     
@@ -82,6 +89,7 @@ public class FXMLPrincipalController implements Initializable {
             servicos = FXMLLoader.load(getClass().getResource("fxml/FXMLBuscaServicos.fxml"));
             agendamento = FXMLLoader.load(getClass().getResource("fxml/FXMLCalendario.fxml"));
             orcamento = FXMLLoader.load(getClass().getResource("fxml/FXMLBuscarOrcamento.fxml"));
+            consultorio = FXMLLoader.load(getClass().getResource("fxml/FXMLBuscarConsultorio.fxml"));
             //tela default
           //  setNode(usuarios);
         } catch (IOException ex) {
@@ -91,7 +99,8 @@ public class FXMLPrincipalController implements Initializable {
     }//fim do metodo carregarTelas
     @FXML
       private void gerenciarUsuarios(ActionEvent event) {
-         setNode(usuarios);
+         carregarTelas();
+          setNode(usuarios);
          lblTitulo.setText("  Usuários");
     }//fim do metodo gerenciarUsuarios
 
@@ -104,22 +113,32 @@ public class FXMLPrincipalController implements Initializable {
 
     @FXML
     private void servicos(ActionEvent event) {
+        carregarTelas();
         setNode(servicos);
          lblTitulo.setText("  Serviços");
     }//fim do metodo servicos
     
     @FXML
     private void agendamentos(ActionEvent event) {
+        carregarTelas();
         setNode(agendamento);
         lblTitulo.setText(" Agenda");
     }//fim do metodo agendamentos
     
     @FXML
     private void orcamentos(ActionEvent event) {
+        carregarTelas();
         setNode(orcamento);
         lblTitulo.setText(" Orçamento");
     }
 
+     @FXML
+    private void consultorio(ActionEvent event) {
+        carregarTelas();
+        setNode(consultorio);
+        lblTitulo.setText(" Consultório");
+    }
+    
     @FXML
     private void pagamentos(ActionEvent event) {
     }
@@ -131,5 +150,30 @@ public class FXMLPrincipalController implements Initializable {
     public  void abrirCadastros(){
         
     }//fim do metodo   
+    private void contruirPopUp(){
+        JFXButton btnLogout = new JFXButton("Usar outra conta");
+       JFXButton btnClose = new JFXButton("Sair");
+        
+       btnLogout.setPadding(new Insets(20));
+       btnClose.setPadding(new Insets(20));
+       
+        VBox vBox = new VBox(btnLogout, btnClose);
+        JFXPopup popup = new JFXPopup();
+        popup.setPopupContent(vBox);
+        
+     
+    }
+
+    @FXML
+    private void mostrarPopup(MouseEvent event) {
+    
+     
+        
+       // fXPopup.show(anchorPane, JFXPopup.PopupVPosition.TOP, JFXPopup.PopupHPosition.LEFT, 10, 70);
+   
+
+    }
+
+  
     
 }//fim da classe FXMLPrincipalController

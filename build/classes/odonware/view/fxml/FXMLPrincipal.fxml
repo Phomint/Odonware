@@ -68,7 +68,7 @@
                      </VBox.margin>
                   </JFXButton>
                   <Separator prefWidth="200.0" />
-                  <JFXButton fx:id="btnConsultorio" alignment="TOP_LEFT" graphicTextGap="20.0" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="46.0" prefWidth="199.0" ripplerFill="#dadada" styleClass="buttonMenu" stylesheets="@../css/Style.css" text="Dados Consultório">
+                  <JFXButton fx:id="btnConsultorio" alignment="TOP_LEFT" graphicTextGap="20.0" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" onAction="#consultorio" prefHeight="46.0" prefWidth="199.0" ripplerFill="#dadada" styleClass="buttonMenu" stylesheets="@../css/Style.css" text="Dados Consultório">
                      <padding>
                         <Insets bottom="15.0" left="20.0" top="15.0" />
                      </padding>
@@ -185,7 +185,7 @@
                   </Label>
                </left>
                <right>
-                  <JFXButton fx:id="btnUser" alignment="TOP_LEFT" graphicTextGap="20.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="62.0" prefWidth="161.0" ripplerFill="#112340" styleClass="labelUser" stylesheets="@../css/Style.css" text="User" textFill="WHITE" BorderPane.alignment="CENTER">
+                  <JFXButton fx:id="btnUser" alignment="TOP_LEFT" graphicTextGap="20.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#mostrarPopup" prefHeight="62.0" prefWidth="161.0" ripplerFill="#112340" styleClass="labelUser" stylesheets="@../css/Style.css" text="User" textFill="WHITE" BorderPane.alignment="CENTER">
                      <padding>
                         <Insets bottom="15.0" left="20.0" top="15.0" />
                      </padding>

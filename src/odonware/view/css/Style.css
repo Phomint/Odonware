@@ -14,6 +14,7 @@
     font-family: Roboto black;
     src: url('../font/RobotoBlack.ttf'); 
 }
+
 .font{
     -fx-font-family:'Roboto medium';    
     -fx-text-fill: #545454;
@@ -168,4 +169,15 @@
 
 .table-cell {
 	-fx-border-color: transparent; /*Linhas Verticais*/
+}
+
+.jfx-snackbar-content{
+    -fx-background-color:#4C4A4A;
+    -fx-background-radius: 3px;
+    -fx-border-radius: 3px;
+}
+.jfx-snackbar-toast{
+    -fx-text-fill:white;
+    -fx-font-family: 'Roboto medium';
+    -fx-font-size:14px;
 }

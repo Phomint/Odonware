@@ -4,6 +4,7 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDialogLayout;
 import com.jfoenix.controls.JFXListView;
+import com.jfoenix.controls.JFXSnackbar;
 import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
 import java.util.List;
@@ -73,8 +74,18 @@ public class FXMLServicoController implements Initializable {
 
     @FXML
     private void salvarView(ActionEvent event) {
+         JFXSnackbar snack = new JFXSnackbar(stackPane);
+        
+        
+      try {
+     //Salvar no banco
         ServicoController.salvarServicoDentista(getTxtValor(),ServicoController.salvarServico(getTxtNomeServico()) , cbDentista.getSelectionModel().getSelectedItem());
-            
+            snack.show("                Salvo com Sucesso                ", 5000);
+      
+ 
+        }catch (Exception e) {
+       snack.show("                Preencha os campos                ", 7000);
+        }
     }//fim do salvarView
 
     @FXML

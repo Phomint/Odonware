@@ -3,6 +3,7 @@ package odonware.view;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDialogLayout;
+import com.jfoenix.controls.JFXSnackbar;
 import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
 import java.util.List;
@@ -90,7 +91,19 @@ public class FXMLCadastrarOrcamentoController implements Initializable {
 
     @FXML
     private void salvarView(ActionEvent event) {
+         JFXSnackbar snack = new JFXSnackbar(stackPane);
+        
+        
+      try {
+     //Salvar no banco
          OrcamentoController.salvarOrcamento(getTxtValor(), getCbPaciente(), getCbServicoDentista());
+          snack.show("                Salvo com Sucesso                ", 5000);
+      
+ 
+        }catch (Exception e) {
+       snack.show("                Preencha os campos                ", 7000);
+        }
+  
     }//fim do metodo salvarView
 
     @FXML
