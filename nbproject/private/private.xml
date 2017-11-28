@@ -3,8 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Patrick%20Amaral/Odonware/src/odonware/view/FXMLServicoController.java</file>
+            <file>file:/C:/Users/Patrick%20Amaral/Odonware/src/odonware/Odonware.java</file>
             <file>file:/C:/Users/Patrick%20Amaral/Odonware/src/odonware/view/FXMLPrincipalController.java</file>
+            <file>file:/C:/Users/Patrick%20Amaral/Odonware/src/odonware/view/fxml/FXMLSobre.fxml</file>
+            <file>file:/C:/Users/Patrick%20Amaral/Odonware/src/odonware/view/FXMLBuscarOrcamentoController.java</file>
+            <file>file:/C:/Users/Patrick%20Amaral/Odonware/src/odonware/view/FXMLSobreController.java</file>
         </group>
     </open-files>
 </project-private>

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDialog?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<JFXDialogLayout fx:id="conteudo" prefHeight="581.0" prefWidth="956.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="odonware.view.FXMLSobreController">
+   <children>
+      <StackPane fx:id="stackPane" prefHeight="533.0" prefWidth="789.0" stylesheets="@../css/Style.css">
+         <children>
+            <AnchorPane id="AnchorPane" fx:id="anchorPrincipal" prefHeight="533.0" prefWidth="792.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <HBox layoutX="67.0" layoutY="213.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="350.0">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" spacing="2.0">
+                           <children>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="Gabriel Duarte">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="PENCIL" size="22.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="gabrieldduarte1997@gmail.com">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="ENVELOPE_ALT" size="22.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="+5514998190899">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="PHONE" size="26.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="Ourinhos, São Paulo">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="MAP_MARKER" size="22.0" text="" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="Desenvolvedor ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="SUITCASE" size="22.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" spacing="2.0">
+                           <children>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="Patrick Amaral">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="PENCIL" size="22.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="patrick.adrp@gmail.com">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="ENVELOPE_ALT" size="22.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="+5514981677217">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="PHONE" size="26.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="Ourinhos, São Paulo">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="MAP_MARKER" size="22.0" text="" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="Desenvolvedor ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="SUITCASE" size="22.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="50.0" right="50.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" spacing="2.0">
+                           <children>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="Patrick Amaral">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="PENCIL" size="22.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="patrick.adrp@gmail.com">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="ENVELOPE_ALT" size="22.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="+5514981677217">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="PHONE" size="26.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="Ourinhos, São Paulo">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="MAP_MARKER" size="22.0" text="" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="Desenvolvedor ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="SUITCASE" size="22.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="57.0" layoutY="203.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="120.0">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" spacing="2.0">
+                           <children>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="Patrick Amaral">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="PENCIL" size="22.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="patrick.adrp@gmail.com">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="ENVELOPE_ALT" size="22.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="+5514981677217">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="PHONE" size="26.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="Ourinhos, São Paulo">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="MAP_MARKER" size="22.0" text="" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="Engenheiro de Software">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="SUITCASE" size="22.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" spacing="2.0">
+                           <children>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="Ana Carolina de Almeida">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="PENCIL" size="22.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="anac.almsantos@gmail.com">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="ENVELOPE_ALT" size="22.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="+5514998463515">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="PHONE" size="26.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="Ourinhos, São Paulo">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="MAP_MARKER" size="22.0" text="" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="Analista de negócios">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="SUITCASE" size="22.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="50.0" right="50.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" spacing="2.0">
+                           <children>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="Vinicius Marques">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="PENCIL" size="22.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="vini.marques1887@gmail.com">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="ENVELOPE_ALT" size="22.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="+5514998074221">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="PHONE" size="26.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="Ourinhos, São Paulo">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="MAP_MARKER" size="22.0" text="" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                              <Label styleClass="font" stylesheets="@../css/Style.css" text="Desenvolvedor ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#4285f4" glyphName="SUITCASE" size="22.0" wrappingWidth="42.428571701049805" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <ToolBar layoutX="-10.0" prefHeight="40.0" prefWidth="759.0" styleClass="toolbarTitulo" stylesheets="@../css/Style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <Label styleClass="labelTitulo" stylesheets="@../css/Style.css" text="       Sobre Odonware" />
+                     </items>
+                  </ToolBar>
+                  <JFXDialog />
+                  <Label layoutX="409.0" layoutY="82.0" styleClass="font" stylesheets="@../css/Style.css" text="Desenvolvido">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+   <padding>
+      <Insets bottom="1.0" />
+   </padding>
+</JFXDialogLayout>

@@ -172,6 +172,7 @@ public class FXMLCadastrarPacienteController implements Initializable {
 
     @FXML
     private void cancelarCadastro(ActionEvent event) {
+        
     }
 
     @FXML

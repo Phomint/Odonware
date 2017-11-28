@@ -144,7 +144,7 @@
                      </VBox.margin>
                   </JFXButton>
                   <Separator prefWidth="200.0" />
-                  <JFXButton fx:id="btnSobre" alignment="TOP_LEFT" graphicTextGap="20.0" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="46.0" prefWidth="199.0" ripplerFill="#dadada" styleClass="buttonMenu" stylesheets="@../css/Style.css" text="Sobre">
+                  <JFXButton fx:id="btnSobre" alignment="TOP_LEFT" graphicTextGap="20.0" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" onAction="#abrirSobre" prefHeight="46.0" prefWidth="199.0" ripplerFill="#dadada" styleClass="buttonMenu" stylesheets="@../css/Style.css" text="Sobre">
                      <padding>
                         <Insets bottom="15.0" left="20.0" top="15.0" />
                      </padding>

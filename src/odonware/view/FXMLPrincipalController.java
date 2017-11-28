@@ -1,25 +1,37 @@
 package odonware.view;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXDialog;
+import com.jfoenix.controls.JFXDialogLayout;
 import com.jfoenix.controls.JFXPopup;
-import com.jfoenix.controls.JFXRippler;
+import com.sun.javafx.charts.ChartLayoutAnimator;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.effect.DropShadow;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import odonware.Odonware;
 
 /**
@@ -60,8 +72,8 @@ public class FXMLPrincipalController implements Initializable {
     public static String user;
     
      private StackPane usuarios, pacientes, servicos, agendamento, orcamento, consultorio;
-    @FXML
     
+    @FXML
     private Label lblTitulo1;
     
     @Override
@@ -71,7 +83,7 @@ public class FXMLPrincipalController implements Initializable {
         setNode(agendamento);
         lblTitulo.setText(" Agenda");
         
-        contruirPopUp();
+        
     }//fim do initialize    
 
     
@@ -90,6 +102,7 @@ public class FXMLPrincipalController implements Initializable {
             agendamento = FXMLLoader.load(getClass().getResource("fxml/FXMLCalendario.fxml"));
             orcamento = FXMLLoader.load(getClass().getResource("fxml/FXMLBuscarOrcamento.fxml"));
             consultorio = FXMLLoader.load(getClass().getResource("fxml/FXMLBuscarConsultorio.fxml"));
+            
             //tela default
           //  setNode(usuarios);
         } catch (IOException ex) {
@@ -147,33 +160,48 @@ public class FXMLPrincipalController implements Initializable {
     private void relatorios(ActionEvent event) {
     }
       
-    public  void abrirCadastros(){
-        
-    }//fim do metodo   
-    private void contruirPopUp(){
-        JFXButton btnLogout = new JFXButton("Usar outra conta");
-       JFXButton btnClose = new JFXButton("Sair");
-        
-       btnLogout.setPadding(new Insets(20));
-       btnClose.setPadding(new Insets(20));
-       
-        VBox vBox = new VBox(btnLogout, btnClose);
-        JFXPopup popup = new JFXPopup();
-        popup.setPopupContent(vBox);
-        
-     
+    @FXML
+    private void abrirSobre(ActionEvent event) {
+       System.out.println("FAB -> Sobre");
+            try {
+                JFXDialogLayout cadastro = FXMLLoader.load(getClass().getResource("fxml/FXMLSobre.fxml"));
+                JFXDialog dialog = new JFXDialog(stackPrincipal, cadastro, JFXDialog.DialogTransition.CENTER);
+         
+                 
+           dialog.show();
+                  
+              } catch (IOException e) {
+                  System.out.println("Erro"+e);
+            }//fim do catch
     }
 
     @FXML
     private void mostrarPopup(MouseEvent event) {
-    
-     
+       JFXButton btnLogout = new JFXButton("Usar outra conta");
+       JFXButton btnClose = new JFXButton("Sair");
+       btnLogout.setPrefSize(120,40);
+       btnClose.setPrefSize(120,40);
+       btnClose.setOnAction(new EventHandler<ActionEvent>() {
+           @Override
+           public void handle(ActionEvent event) {
+             System.exit(0);
+           }
+       });
+       btnLogout.setOnAction(new EventHandler<ActionEvent>() {
+           @Override
+           public void handle(ActionEvent event) {
+              //logout 
+               
+           }
+       });
+       
+        VBox vBox = new VBox(btnLogout, btnClose);
+        JFXPopup popup = new JFXPopup();
         
-       // fXPopup.show(anchorPane, JFXPopup.PopupVPosition.TOP, JFXPopup.PopupHPosition.LEFT, 10, 70);
-   
-
+        Pane popUpPane = new Pane();
+        popUpPane.getChildren().add(vBox);
+        popup.setPopupContent(popUpPane);
+        popup.show(rootLayout, JFXPopup.PopupVPosition.TOP, JFXPopup.PopupHPosition.RIGHT, -20, 75);
     }
-
-  
     
 }//fim da classe FXMLPrincipalController
