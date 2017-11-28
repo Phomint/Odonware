@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDialog?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+
+<StackPane fx:id="stackPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="odonware.view.FXMLRelatoriosController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="anchorPrincipal" prefHeight="274.0" prefWidth="513.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <ToolBar layoutX="-10.0" prefHeight="40.0" prefWidth="759.0" styleClass="toolbarTitulo" stylesheets="@../css/Style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <items>
+                  <Label styleClass="labelTitulo" stylesheets="@../css/Style.css" text="     Relatórios" />
+               </items>
+            </ToolBar>
+            <JFXDialog />
+            <JFXButton fx:id="btnImprimir" layoutX="336.0" layoutY="200.0" onAction="#ImprimirView" prefHeight="36.0" prefWidth="90.0" ripplerFill="#4285f4" styleClass="buttonMedio" stylesheets="@../css/Style.css" text="IMPRIMIR" />
+            <JFXComboBox fx:id="cbEscolha" focusColor="#4285f4" layoutX="66.0" layoutY="96.0" onKeyPressed="#pressed" prefHeight="28.0" prefWidth="365.0" promptText="Escolha" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada" />
+            <JFXButton fx:id="btnCancelar" layoutX="66.0" layoutY="200.0" onAction="#CancelarRelatorio" prefHeight="36.0" prefWidth="90.0" ripplerFill="#4285f4" styleClass="buttonMedio" stylesheets="@../css/Style.css" text="CANCELAR" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
