@@ -10,7 +10,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 
@@ -22,13 +21,11 @@ import javafx.scene.layout.StackPane;
 public class FXMLSobreController implements Initializable {
 
     @FXML
-    private StackPane stackPane;
-    @FXML
     private JFXDialogLayout conteudo;
     @FXML
-    private AnchorPane anchorPrincipal;
+    private StackPane stackPane;
     @FXML
-    private ImageView imgPatrick;
+    private AnchorPane anchorPrincipal;
 
     /**
      * Initializes the controller class.

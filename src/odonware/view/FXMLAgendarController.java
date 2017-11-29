@@ -4,6 +4,7 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXDialogLayout;
+import com.jfoenix.controls.JFXSnackbar;
 import com.jfoenix.controls.JFXTimePicker;
 import java.net.URL;
 import java.time.LocalDate;
@@ -70,7 +71,18 @@ public class FXMLAgendarController implements Initializable {
 
     @FXML
     private void salvarView(ActionEvent event) {
+         JFXSnackbar snack = new JFXSnackbar(stackPane);
+        
+        
+      try {
+     //Salvar no banco
         AgendamentoController.salvarAgendamento(getCbPaciente(), getDpData(), getTpHora(), getCbDentista(), getCbAtendimento());
+         snack.show("                Salvo com Sucesso                ", 5000);
+      
+ 
+        }catch (Exception e) {
+       snack.show("                Preencha os campos                ", 7000);
+        }
     }//fim do salvarView
 
     @FXML

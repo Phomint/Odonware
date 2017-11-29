@@ -71,7 +71,7 @@ public class FXMLPrincipalController implements Initializable {
         
     public static String user;
     
-     private StackPane usuarios, pacientes, servicos, agendamento, orcamento, consultorio, relatorios;
+     private StackPane usuarios, pacientes, servicos, agendamento, orcamento;
     
     @FXML
     private Label lblTitulo1;
@@ -101,8 +101,7 @@ public class FXMLPrincipalController implements Initializable {
             servicos = FXMLLoader.load(getClass().getResource("fxml/FXMLBuscaServicos.fxml"));
             agendamento = FXMLLoader.load(getClass().getResource("fxml/FXMLCalendario.fxml"));
             orcamento = FXMLLoader.load(getClass().getResource("fxml/FXMLBuscarOrcamento.fxml"));
-            consultorio = FXMLLoader.load(getClass().getResource("fxml/FXMLBuscarConsultorio.fxml"));
-            relatorios = FXMLLoader.load(getClass().getResource("fxml/FXMLRelatorios.fxml"));
+            
             
             //tela default
           //  setNode(usuarios);
@@ -148,26 +147,42 @@ public class FXMLPrincipalController implements Initializable {
 
      @FXML
     private void consultorio(ActionEvent event) {
-        carregarTelas();
-        setNode(consultorio);
-        lblTitulo.setText(" Consultório");
+        System.out.println("BUTTON -> Consultorio");
+            try {
+                JFXDialogLayout cadastro = FXMLLoader.load(getClass().getResource("fxml/FXMLCadastrarConsultorio.fxml"));
+                JFXDialog dialog = new JFXDialog(stackPrincipal, cadastro, JFXDialog.DialogTransition.CENTER);
+         
+                 
+           dialog.show();
+                  
+              } catch (IOException e) {
+                  System.out.println("Erro"+e);
+            }//fim do catch
+      
     }
     
     @FXML
     private void pagamentos(ActionEvent event) {
     }
-    
+
     @FXML
     private void relatorios(ActionEvent event) {
-        carregarTelas();
-        setNode(relatorios);
-        lblTitulo.setText(" Relatórios");
+         System.out.println("BUTTON -> Relatorios");
+            try {
+                JFXDialogLayout cadastro = FXMLLoader.load(getClass().getResource("fxml/FXMLRelatorios.fxml"));
+                JFXDialog dialog = new JFXDialog(stackPrincipal, cadastro, JFXDialog.DialogTransition.CENTER);
+         
+                 
+           dialog.show();
+                  
+              } catch (IOException e) {
+                  System.out.println("Erro"+e);
+            }//fim do catch
     }
-
       
     @FXML
     private void abrirSobre(ActionEvent event) {
-       System.out.println("FAB -> Sobre");
+       System.out.println("BUTTON -> Sobre");
             try {
                 JFXDialogLayout cadastro = FXMLLoader.load(getClass().getResource("fxml/FXMLSobre.fxml"));
                 JFXDialog dialog = new JFXDialog(stackPrincipal, cadastro, JFXDialog.DialogTransition.CENTER);
