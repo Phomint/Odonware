@@ -71,7 +71,7 @@ public class FXMLPrincipalController implements Initializable {
         
     public static String user;
     
-     private StackPane usuarios, pacientes, servicos, agendamento, orcamento, consultorio;
+     private StackPane usuarios, pacientes, servicos, agendamento, orcamento, consultorio, relatorios;
     
     @FXML
     private Label lblTitulo1;
@@ -102,6 +102,7 @@ public class FXMLPrincipalController implements Initializable {
             agendamento = FXMLLoader.load(getClass().getResource("fxml/FXMLCalendario.fxml"));
             orcamento = FXMLLoader.load(getClass().getResource("fxml/FXMLBuscarOrcamento.fxml"));
             consultorio = FXMLLoader.load(getClass().getResource("fxml/FXMLBuscarConsultorio.fxml"));
+            relatorios = FXMLLoader.load(getClass().getResource("fxml/FXMLRelatorios.fxml"));
             
             //tela default
           //  setNode(usuarios);
@@ -155,10 +156,14 @@ public class FXMLPrincipalController implements Initializable {
     @FXML
     private void pagamentos(ActionEvent event) {
     }
-
+    
     @FXML
     private void relatorios(ActionEvent event) {
+        carregarTelas();
+        setNode(relatorios);
+        lblTitulo.setText(" Relatórios");
     }
+
       
     @FXML
     private void abrirSobre(ActionEvent event) {
