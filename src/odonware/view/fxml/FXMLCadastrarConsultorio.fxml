@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<JFXDialogLayout fx:id="conteudo" prefHeight="534.0" prefWidth="759.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="odonware.view.FXMLCadastrarConsultorioController">
+<JFXDialogLayout fx:id="conteudo" prefHeight="534.0" prefWidth="759.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="odonware.view.FXMLCadastrarConsultorioController">
    <children>
       <StackPane fx:id="stackPane" stylesheets="@../css/Style.css">
          <children>
@@ -25,19 +25,19 @@
                               <Insets bottom="8.0" top="16.0" />
                            </VBox.margin>
                         </JFXTextField>
-                        <JFXTextField fx:id="txtEmail" editable="false" focusColor="#4285f4" prefHeight="26.0" prefWidth="401.0" promptText="Razão Social" styleClass="textAreaComum" stylesheets="@../css/Style.css" text="Lima Pereira Tomado LTDA" unFocusColor="#dadada">
+                        <JFXTextField fx:id="txtRazaoSocial" editable="false" focusColor="#4285f4" prefHeight="26.0" prefWidth="401.0" promptText="Razão Social" styleClass="textAreaComum" stylesheets="@../css/Style.css" text="Lima Pereira Tomado LTDA" unFocusColor="#dadada">
                            <VBox.margin>
                               <Insets bottom="8.0" top="24.0" />
                            </VBox.margin>
                         </JFXTextField>
                         <HBox prefHeight="17.0" prefWidth="711.0">
                            <children>
-                              <JFXTextField fx:id="txtRg" editable="false" focusColor="#4285f4" prefHeight="26.0" prefWidth="378.0" promptText="CNPJ (apenas números)" styleClass="textAreaComum" stylesheets="@../css/Style.css" text="52.123.856/0001-12" unFocusColor="#dadada">
+                              <JFXTextField fx:id="txtCnpj" editable="false" focusColor="#4285f4" prefHeight="26.0" prefWidth="378.0" promptText="CNPJ (apenas números)" styleClass="textAreaComum" stylesheets="@../css/Style.css" text="52.123.856/0001-12" unFocusColor="#dadada">
                                  <HBox.margin>
                                     <Insets bottom="8.0" right="10.0" top="8.0" />
                                  </HBox.margin>
                               </JFXTextField>
-                              <JFXTextField fx:id="txtCpf" editable="false" focusColor="#4285f4" prefHeight="26.0" prefWidth="384.0" promptText="Inscrição Estadual (apenas números)" styleClass="textAreaComum" stylesheets="@../css/Style.css" text="88448866-88" unFocusColor="#dadada">
+                              <JFXTextField fx:id="txtInscricao" editable="false" focusColor="#4285f4" prefHeight="26.0" prefWidth="384.0" promptText="Inscrição Estadual (apenas números)" styleClass="textAreaComum" stylesheets="@../css/Style.css" text="88448866-88" unFocusColor="#dadada">
                                  <HBox.margin>
                                     <Insets bottom="10.0" left="10.0" top="10.0" />
                                  </HBox.margin>
@@ -83,7 +83,7 @@
                               </JFXTextField>
                            </children>
                         </HBox>
-                        <JFXTextField fx:id="txtNome1" editable="false" focusColor="#4285f4" promptText="Email" styleClass="textAreaComum" stylesheets="@../css/Style.css" text="vitorrenatofernandes-99@iesa.com.br" unFocusColor="#dadada" />
+                        <JFXTextField fx:id="txtEmail" editable="false" focusColor="#4285f4" promptText="Email" styleClass="textAreaComum" stylesheets="@../css/Style.css" text="vitorrenatofernandes-99@iesa.com.br" unFocusColor="#dadada" />
                         <HBox fx:id="hboxDentista" prefHeight="17.0" prefWidth="711.0" visible="false">
                            <children>
                               <JFXTextField fx:id="txtCro" focusColor="#4285f4" prefHeight="26.0" prefWidth="407.0" promptText="CRO (apenas números)" styleClass="textAreaComum" stylesheets="@../css/Style.css" unFocusColor="#dadada">

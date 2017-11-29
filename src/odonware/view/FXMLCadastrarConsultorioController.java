@@ -34,10 +34,6 @@ public class FXMLCadastrarConsultorioController implements Initializable {
     @FXML
     private JFXTextField txtNome;
     @FXML
-    private JFXTextField txtRg;
-    @FXML
-    private JFXTextField txtCpf;
-    @FXML
     private JFXTextField txtEndereco;
     @FXML
     private JFXTextField txtNumero;
@@ -50,10 +46,6 @@ public class FXMLCadastrarConsultorioController implements Initializable {
     @FXML
     private JFXTextField txtEmail;
     @FXML
-    private JFXTextField txtLogin;
-    @FXML
-    private JFXPasswordField txtSenha;
-    @FXML
     private HBox hboxDentista;
     @FXML
     private JFXTextField txtCro;
@@ -64,7 +56,11 @@ public class FXMLCadastrarConsultorioController implements Initializable {
     @FXML
     private JFXButton btnCancelar;
     @FXML
-    private JFXButton btnDentista;
+    private JFXTextField txtRazaoSocial;
+    @FXML
+    private JFXTextField txtCnpj;
+    @FXML
+    private JFXTextField txtInscricao;
 
     /**
      * Initializes the controller class.
@@ -76,14 +72,22 @@ public class FXMLCadastrarConsultorioController implements Initializable {
 
     @FXML
     private void salvarView(ActionEvent event) {
+     txtNome.setEditable(true);
+     txtRazaoSocial.setEditable(true);
+     txtBairro.setEditable(true);
+     txtCidade.setEditable(true);
+     txtCnpj.setEditable(true);
+     txtCro.setEditable(true);
+     txtEmail.setEditable(true);
+     txtEspecialidade.setEditable(true);
+     txtTelefone.setEditable(true);
+     txtInscricao.setEditable(true);
+     btnSalvar.setText("SALVAR");
     }
 
     @FXML
     private void cancelarCadastro(ActionEvent event) {
     }
 
-    @FXML
-    private void adicionarCamposDentista(ActionEvent event) {
-    }
     
 }
